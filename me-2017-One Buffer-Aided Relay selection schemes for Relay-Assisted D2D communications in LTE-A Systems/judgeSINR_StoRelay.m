@@ -10,8 +10,8 @@
 
 % 返回
 % 1.所有CUE用户到Relay的SINR
-% 2.Relay到所有CUE用户的SINR
-function [SINR_CueToRelay, SINR_RelayToCue] = judgeSINR_StoRelay(Relay_x,Relay_y,S_x,S_y,CUE_x,CUE_y,array_fastFading,array_slowFading,BandWidth,Power_UE)
+% 2.S到所有CUE用户的SINR
+function [SINR_CueToRelay, SINR_SToCue] = judgeSINR_StoRelay(Relay_x,Relay_y,S_x,S_y,CUE_x,CUE_y,array_fastFading,array_slowFading,BandWidth,Power_UE)
     K = 0.01; % 路损常数 K
     a = 4; % 路损系数 α
     noise_density = -174; % 噪声密度 -174dbm/hz
@@ -43,6 +43,6 @@ function [SINR_CueToRelay, SINR_RelayToCue] = judgeSINR_StoRelay(Relay_x,Relay_y
     P_StoBS = 10^(Power_UE/10) * h_StoBS;
     
     % 3.计算SINR
-    SINR_RelayToCue = P_CutToBS / (P_StoBS + P_noise);
+    SINR_SToCue = P_CutToBS / (P_StoBS + P_noise);
 
 end
