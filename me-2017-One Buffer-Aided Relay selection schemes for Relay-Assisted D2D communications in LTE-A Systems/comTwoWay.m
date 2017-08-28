@@ -11,11 +11,10 @@
 % 9.,bandwidth  带宽
 % 10.Power_UE 发射功率
 
-function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE)
+function [RateBaseTime,RateBufferBaseTime,m1_RateBase,m2_RateBase,m1_RateBufferBase,m2_RateBufferBase,t_last_RataBase,t_last_RateBufferBase] = comTwoWay(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE,SINR_require)
 
     % 常数
-    SINR_require = 10;
-    R_min = bandwidth*log2(1 + 10);
+    R_min = bandwidth*log2(1 + 10^(SINR_require/10));
 
     % RateBase 用的参数
     data_save_RateBase = [0 0 0 0 0 0 0 0 0 0]; % 记录节点中的存储数据量的个数
@@ -35,9 +34,12 @@ function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_
     m2_RateBufferBase = 0;
     flag_RateBufferBase = 1;
     
+    t_RateBase = t_residue;
+    t_RateBufferBase = t_residue;
+   
     for i = 1:1:1000000000
-        array_fastFading =  exprnd(1,1,100000); % 生成指数分布数组,大量数据，取20个
-        array_slowFading =  lognrnd(0,8,1,100000); % 生成正态对数分布数组，大量数据，取20个
+        array_fastFading =  exprnd(1,1,2500); % 生成指数分布数组,大量数据，取20个
+        array_slowFading =  lognrnd(0,8,1,2500); % 生成正态对数分布数组，大量数据，取20个
         
         % 计算所有S和所有中继对CUE用户的SINR
         SINR_SToCue = judgeSINR_StoCue(x_S,y_S,x_CUE,y_CUE,array_fastFading(1:21),array_slowFading(1:21),bandwidth,Power_UE);
@@ -106,7 +108,7 @@ function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_
                 if R_maxloc <= 10  % 前向链路
                     if total_send_RateBase <= tranSize % 发送节点数据传完了
                         t_tran = total_send_RateBase/R_min;
-                         if data_save_RateBase(R_maxloc) + total_send_RateBase <= Relay_buffer * M_packet_length && t_residue(R_maxloc) >= t_tran*1000000
+                         if data_save_RateBase(R_maxloc) + total_send_RateBase <= Relay_buffer * M_packet_length && t_RateBase(R_maxloc) >= t_tran*1000000
                              data_save_RateBase(R_maxloc) = data_save_RateBase(R_maxloc) + total_send_RateBase;
                              total_send_RateBase = 0;
                          else
@@ -114,7 +116,7 @@ function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_
                          end
                     else
                         t_tran = tranSize/R_min;
-                        if data_save_RateBase(R_maxloc) + tranSize <= Relay_buffer * M_packet_length && t_residue(R_maxloc) >= t_tran*1000000
+                        if data_save_RateBase(R_maxloc) + tranSize <= Relay_buffer * M_packet_length && t_RateBase(R_maxloc) >= t_tran*1000000
                             % 给相应中继增加数据量，并且更新中继节点存储的数据量
                             data_save_RateBase(R_maxloc) = data_save_RateBase(R_maxloc) + tranSize;
                             total_send_RateBase = total_send_RateBase - tranSize;
@@ -130,20 +132,20 @@ function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_
                         %更新数据
                         total_receive_RateBase = total_receive_RateBase + data_save_RateBase(R_maxloc); % 更新总接收到的数据
                         data_save_RateBase(R_maxloc) = 0;    % 更新节点中存储的数据量
-                        t_residue(R_maxloc) =  t_residue(R_maxloc) - t_tran*1000000; % 更新节点剩余工作时间           
+                        t_RateBase(R_maxloc) =  t_RateBase(R_maxloc) - t_tran*1000000; % 更新节点剩余工作时间           
                     else
                          total_receive_RateBase = total_receive_RateBase + tranSize; % 更新总接收到的数据
                          data_save_RateBase(R_maxloc) = data_save_RateBase(R_maxloc) - tranSize;    % 更新节点中存储的数据量
-                         t_residue(R_maxloc) =  t_residue(R_maxloc) - 1; % 更新节点剩余工作时间       
+                         t_RateBase(R_maxloc) =  t_RateBase(R_maxloc) - 1; % 更新节点剩余工作时间       
                     end            
                 end
             else
                 m1_RateBase = m1_RateBase +1;
             end
 
-           if total_receive_RateBase / 2048 > flag_RateBase
+           if total_receive_RateBase / 10240 > flag_RateBase
                total_receive_RateBase
-               flag_RateBase = flag_RateBase + 2;
+               flag_RateBase = flag_RateBase + 1;
            end
         elseif total_receive_RateBase == M_packet*M_packet_length
             total_receive_RateBase = total_receive_RateBase + 1;
@@ -171,7 +173,7 @@ function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_
                         % 计算传输速率
                         R = bandwidth * log2(1 + max_SINR); % bit/s
                         % 求该节点剩余能量能够发送的数据量
-                        RelaycanSend = R_min*t_residue(relayNum);
+                        RelaycanSend = R_min*t_RateBufferBase(relayNum);
                         % 该节点剩余空间还能存储的数据量
                         RelaycanSave = Relay_buffer * M_packet_length - data_save_RateBufferBase(relayNum);
                         % 计算权重
@@ -210,7 +212,7 @@ function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_
                     tranSize = floor(RateStoR(maxLoc) * (1/1000000));
                     if total_send_RateBufferBase <= tranSize % 发送节点数据传完了
                         t_tran = total_send_RateBufferBase/R_min;
-                         if data_save_RateBufferBase(maxLoc) + total_send_RateBufferBase <= Relay_buffer * M_packet_length && t_residue(maxLoc) >= t_tran*1000000
+                         if data_save_RateBufferBase(maxLoc) + total_send_RateBufferBase <= Relay_buffer * M_packet_length && t_RateBufferBase(maxLoc) >= t_tran*1000000
                              data_save_RateBufferBase(maxLoc) = data_save_RateBufferBase(maxLoc) + total_send_RateBufferBase;
                              total_send_RateBufferBase = 0;
                          else
@@ -218,7 +220,7 @@ function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_
                          end
                     else
                         t_tran = tranSize/R_min;
-                        if data_save_RateBufferBase(maxLoc) + tranSize <= Relay_buffer * M_packet_length && t_residue(maxLoc) >= t_tran*1000000
+                        if data_save_RateBufferBase(maxLoc) + tranSize <= Relay_buffer * M_packet_length && t_RateBufferBase(maxLoc) >= t_tran*1000000
                             % 给相应中继增加数据量，并且更新中继节点存储的数据量
                             data_save_RateBufferBase(maxLoc) = data_save_RateBufferBase(maxLoc) + tranSize;
                             total_send_RateBufferBase = total_send_RateBufferBase - tranSize;
@@ -236,20 +238,20 @@ function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_
                         %更新数据
                         total_receive_RateBufferBase = total_receive_RateBufferBase + data_save_RateBufferBase(maxLoc); % 更新总接收到的数据
                         data_save_RateBufferBase(maxLoc) = 0;    % 更新节点中存储的数据量
-                        t_residue(maxLoc) =  t_residue(maxLoc) - t_tran*1000000; % 更新节点剩余工作时间           
+                        t_RateBufferBase(maxLoc) =  t_RateBufferBase(maxLoc) - t_tran*1000000; % 更新节点剩余工作时间           
                     else
                          total_receive_RateBufferBase = total_receive_RateBufferBase + tranSize; % 更新总接收到的数据
                          data_save_RateBufferBase(maxLoc) = data_save_RateBufferBase(maxLoc) - tranSize;    % 更新节点中存储的数据量
-                         t_residue(maxLoc) =  t_residue(maxLoc) - 1; % 更新节点剩余工作时间       
+                         t_RateBufferBase(maxLoc) =  t_RateBufferBase(maxLoc) - 1; % 更新节点剩余工作时间       
                     end                
                 end
             else
                 m1_RateBufferBase = m1_RateBufferBase + 1;
             end
 
-            if total_receive_RateBufferBase / 2048 > flag_RateBufferBase
+            if total_receive_RateBufferBase / 10240 > flag_RateBufferBase
                total_receive_RateBufferBase
-               flag_RateBufferBase = flag_RateBufferBase + 2;
+               flag_RateBufferBase = flag_RateBufferBase + 1;
             end
         elseif total_receive_RateBufferBase ==  M_packet*M_packet_length
             total_receive_RateBufferBase = M_packet*M_packet_length + 1;
@@ -265,7 +267,10 @@ function [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_
             RateBufferBaseTime
             m1_RateBufferBase
             m2_RateBufferBase
-            break;
+            
+           t_last_RataBase = t_RateBase;
+           t_last_RateBufferBase = t_RateBufferBase;
+           break;
         end
     end
 end

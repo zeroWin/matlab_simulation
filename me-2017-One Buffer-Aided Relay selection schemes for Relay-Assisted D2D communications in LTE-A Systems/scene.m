@@ -85,13 +85,20 @@ end
 % array_fastFading =  exprnd(1);  % 均值为1的指数分布
 % array_slowFading = lognrnd(0,8); %均值为0，方差为8db的正态对数分布
 
-[tranTime,data_save_time] = randomSelect(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE);
+% [tranTime,data_save_time] = randomSelect(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE);
+% 
+% %% 方法二 以速率为准则选择链路
+% %[tranTime,data_save_time] = RateBaseSelect(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE);
+% 
+% %% 方法三 同时考虑速率，能量，缓存空间选择链路
+% %[tranTime,data_save_time] = RateBufferBaseSelect(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE);
+% 
+% % 比较两种方法传输
+%  [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE);
+% 
+%  
+ 
 
-%% 方法二 以速率为准则选择链路
-%[tranTime,data_save_time] = RateBaseSelect(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE);
-
-%% 方法三 同时考虑速率，能量，缓存空间选择链路
-%[tranTime,data_save_time] = RateBufferBaseSelect(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE);
-
-% 比较两种方法传输
- [RateBaseTime,RateBufferBaseTime] = comTwoWay(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE);
+ 
+ 
+ 

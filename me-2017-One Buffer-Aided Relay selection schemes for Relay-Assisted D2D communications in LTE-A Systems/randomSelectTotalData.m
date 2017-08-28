@@ -10,21 +10,20 @@
 % 8.x_DUE,y_DUE 所有DUE的坐标
 % 9.,bandwidth  带宽
 % 10.Power_UE 发射功率
-function [tranTime,data_save_time,m1,m2,t_last] = randomSelect(t_residue,Relay_buffer,M_packet,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE,SINR_require)
+function [tranTime,totalData] = randomSelectTotalData(t_residue,Relay_buffer,M_packet_length,x_S,y_S,x_D,y_D,x_CUE,y_CUE,x_DUE,y_DUE,bandwidth,Power_UE,SINR_require)
 
 % 常数
 R_min = bandwidth*log2(1 + 10^(SINR_require/10));
 
 road_array = [1 2 3 4 5 6 7 8 9 10 0 0 0 0 0 0 0 0 0 0]; % 记录那些链路能选择
 data_save = [0 0 0 0 0 0 0 0 0 0]; % 记录节点中的存储数据量的个数
-total_send = M_packet*M_packet_length;
 total_receive = 0;
 
 m1 = 0;
 m2 = 0;
-data_save_temp = zeros(1,10);
+
 flag = 1;
-for i = 1:1:1000000000
+for i = 1:1:1000000000000000000
     road_array_temp = find(road_array > 0);
     index = randperm(length(road_array_temp));
     road_select = road_array_temp(index(1)); % 选择出的路径
@@ -101,37 +100,27 @@ for i = 1:1:1000000000
             % 判断中继节点能量和空间是否足够
             % 计算节点剩余能量可以工作的时间t_residue s
             % 计算节点以最慢速率传输这些数据量需要的时间t_tran s
-            if total_send <= tranSize % 发送节点数据传完了
-                t_tran = total_send/R_min;
-                 if data_save(road_select) + total_send <= Relay_buffer * M_packet_length && t_residue(road_select) >= t_tran*1000000
-                     road_array(1:10) = 0;
-                     data_save(road_select) = data_save(road_select) + total_send;
-                     road_array(road_select + 10) = road_select + 10;
-                     total_send = 0;
-                 else
-                     m2 = m2 + 1;
-                 end
+            t_tran = tranSize/R_min;
+            if data_save(road_select) + tranSize <= Relay_buffer * M_packet_length && t_residue(road_select) >= t_tran*1000000
+                % 给相应中继增加数据量，并且更新中继节点存储的数据量
+                data_save(road_select) = data_save(road_select) + tranSize;
+                road_array(road_select + 10) = road_select + 10;
             else
-                t_tran = tranSize/R_min;
-                if data_save(road_select) + tranSize <= Relay_buffer * M_packet_length && t_residue(road_select) >= t_tran*1000000
-                    % 给相应中继增加数据量，并且更新中继节点存储的数据量
-                    data_save(road_select) = data_save(road_select) + tranSize;
-                    road_array(road_select + 10) = road_select + 10;
-                    total_send = total_send - tranSize;
-                 else
-                     m2 = m2 + 1;                    
-                end
+                m2 = m2 + 1;
             end
         else
             m1 = m1 + 1;
         end
     end
    %data_save_temp = [data_save_temp;data_save];
-   if total_receive / 10240 > flag
+   if total_receive / 102400 > flag
        total_receive
+       i
+       t_residue
        flag = flag + 1;
    end
-    if total_receive >= M_packet*M_packet_length
+    if (~isempty(find(t_residue < 10))) % 有一个节点能量小于10
+        t_residue
         total_receive
         i
         m1
@@ -140,7 +129,7 @@ for i = 1:1:1000000000
     end
 end
     tranTime = i;
+    totalData = total_receive;
     %data_save_time = data_save_temp([2:end],:);
-    data_save_time = 0;
-    t_last = t_residue;
+
 end
