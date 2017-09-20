@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.2-0.9997.4 (MiKTeX 2.9) (preloaded format=xelatex 2017.7.10)  28 AUG 2017 16:08
+This is XeTeX, Version 3.1415926-2.2-0.9997.4 (MiKTeX 2.9) (preloaded format=xelatex 2017.7.10)  20 SEP 2017 19:44
 entering extended mode
 **bare_conf.tex
 
@@ -267,14 +267,7 @@ LaTeX Info: Redefining \cite on input line 694.
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
 )
 ("G:\GitHub\matlab_simulation\me-2017-One Buffer-Aided Relay selection schemes 
-for Relay-Assisted D2D communications in LTE-A Systems\LaTex\bare_conf.aux"
-
-LaTeX Warning: Label `fig_success' multiply defined.
-
-
-LaTeX Warning: Label `fig_time' multiply defined.
-
-)
+for Relay-Assisted D2D communications in LTE-A Systems\LaTex\bare_conf.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -289,55 +282,126 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 
 -- Lines per column: 56 (exact).
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 32.
-LaTeX Font Info:    Try loading font information for U+ding on input line 32.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 34.
+LaTeX Font Info:    Try loading font information for U+ding on input line 34.
 (C:\CTEX\MiKTeX\tex\latex\bbding\uding.fd
 File: Uding.fd 1996/02/01 v1.0 BBding font definitions
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 32.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 34.
 
 (C:\CTEX\MiKTeX\tex\latex\psnfss\omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
-File: fig1.eps Graphic file (type eps)
- <fig1.eps>
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 59--63
- [] 
- []
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
+
+
+Package natbib Warning: Citation `5350367' on page 1 undefined on input line 46
+.
+
+
+Package natbib Warning: Citation `7949342' on page 1 undefined on input line 46
+.
+
+
+Package natbib Warning: Citation `7254241' on page 1 undefined on input line 46
+.
+
+
+Package natbib Warning: Citation `7128330' on page 1 undefined on input line 46
+.
+
+
+Package natbib Warning: Citation `7878672' on page 1 undefined on input line 46
+.
+
+
+Package natbib Warning: Citation `7504380' on page 1 undefined on input line 46
+.
+
+
+Package natbib Warning: Citation `7742334' on page 1 undefined on input line 46
+.
+
+
+Package natbib Warning: Citation `7876267' on page 1 undefined on input line 48
+.
+
+
+Package natbib Warning: Citation `7925800' on page 1 undefined on input line 48
+.
+
+
+Package natbib Warning: Citation `6775376' on page 1 undefined on input line 50
+.
+
+
+Package natbib Warning: Citation `7450161' on page 1 undefined on input line 50
+.
+
+
+Package natbib Warning: Citation `7752964' on page 1 undefined on input line 50
+.
+
+
+Package natbib Warning: Citation `6807959' on page 1 undefined on input line 52
+.
 
 [1
 
 
-] [2]
+]
+File: fig1.eps Graphic file (type eps)
+ <fig1.eps>
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 63--67
+ [] 
+ []
+
+
+Package natbib Warning: Citation `6560489' on page 2 undefined on input line 75
+.
+
+[2]
+
+Package natbib Warning: Citation `6981957' on page 3 undefined on input line 12
+2.
+
+
+Package natbib Warning: Citation `6981957' on page 3 undefined on input line 12
+6.
+
 File: fig2.eps Graphic file (type eps)
- <fig2.eps>
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 132--136
+<fig2.eps>
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 136--140
  [] 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+Package natbib Warning: Citation `4244758' on page 4 undefined on input line 17
+9.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 []|\OT1/ptm/m/n/7 Randomly dis-tribut-ed in
  []
 
 File: fig3.pdf Graphic file (type QTm)
 <use  "fig3.pdf" >
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 234--238
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 240--244
 [][] 
  []
 
 File: fig4.pdf Graphic file (type QTm)
 <use  "fig4.pdf" >
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 244--248
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 250--254
  [] 
  []
 
 [4]
 File: fig5.pdf Graphic file (type QTm)
  <use  "fig5.pdf" >
-Overfull \hbox (0.94499pt too wide) in paragraph at lines 258--262
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 264--268
  [] 
  []
 
@@ -355,20 +419,28 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
+
+Package natbib Warning: There were undefined citations.
+
 [6]
 ("G:\GitHub\matlab_simulation\me-2017-One Buffer-Aided Relay selection schemes 
-for Relay-Assisted D2D communications in LTE-A Systems\LaTex\bare_conf.aux")
+for Relay-Assisted D2D communications in LTE-A Systems\LaTex\bare_conf.aux"
 
-LaTeX Warning: There were multiply-defined labels.
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3260 strings out of 430486
- 45837 string characters out of 3191694
- 113778 words of memory out of 3000000
- 6382 multiletter control sequences out of 15000+200000
+ 3252 strings out of 430486
+ 45711 string characters out of 3191694
+ 114778 words of memory out of 3000000
+ 6374 multiletter control sequences out of 15000+200000
  30975 words of font info for 74 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 33i,13n,28p,1320b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,13n,28p,1329b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on bare_conf.pdf (6 pages).

@@ -38,28 +38,16 @@ J.~Gu, S.~J. Bae, S.~F. Hasan, and M.~Y. Chung, ``{Heuristic Algorithm for
   Transactions on Wireless Communications}, vol.~15, no.~1, pp. 769--780, Jan
   2016.
 
-\bibitem{7878672}
-R.~Ma, Y.~J. Chang, H.~H. Chen, and C.~Y. Chiu, ``{On Relay Selection Schemes
-  for Relay-Assisted D2D Communications in LTE-A Systems},'' \emph{IEEE
-  Transactions on Vehicular Technology}, vol.~PP, no.~99, pp. 1--1, 2017.
+\bibitem{7128330}
+P.~Mach, Z.~Becvar, and T.~Vanek, ``In-band device-to-device communication in
+  ofdma cellular networks: A survey and challenges,'' \emph{IEEE Communications
+  Surveys Tutorials}, vol.~17, no.~4, pp. 1885--1922, Fourthquarter 2015.
 
 \bibitem{7504380}
 M.~Oiwa and S.~Sugiura, ``{On the Simultaneous Exploitation of Multiple
   Source-to-Relay Channels in Buffer-Aided Two-Hop Cooperative Networks},'' in
   \emph{2016 IEEE 83rd Vehicular Technology Conference (VTC Spring)}, May 2016,
   pp. 1--5.
-
-\bibitem{7553029}
-B.~Bai, L.~Wang, Z.~Han, W.~Chen, and T.~Svensson, ``{Caching based
-  socially-aware D2D communications in wireless content delivery networks: a
-  hypergraph framework},'' \emph{IEEE Wireless Communications}, vol.~23, no.~4,
-  pp. 74--81, August 2016.
-
-\bibitem{6848856}
-L.~Lei, X.~. Shen, M.~Dohler, C.~Lin, and Z.~Zhong, ``{Queuing Models With
-  Applications to Mode Selection in Device-to-Device Communications Underlaying
-  Cellular Networks},'' \emph{IEEE Transactions on Wireless Communications},
-  vol.~13, no.~12, pp. 6697--6715, Dec 2014.
 
 \bibitem{7742334}
 Z.~Chen, N.~Pappas, and M.~Kountouris, ``{Probabilistic Caching in Wireless
@@ -77,16 +65,16 @@ R.~Zeng and C.~Tepedelenlioglu, ``{Multiple Device-to-Device Users Overlaying
   Cellular Networks},'' in \emph{2017 IEEE Wireless Communications and
   Networking Conference (WCNC)}, March 2017, pp. 1--6.
 
+\bibitem{6775376}
+M.~Hasan, E.~Hossain, and D.~I. Kim, ``{Resource Allocation Under Channel
+  Uncertainties for Relay-Aided Device-to-Device Communication Underlaying
+  {LTE-A} Cellular Networks},'' \emph{IEEE Transactions on Wireless
+  Communications}, vol.~13, no.~4, pp. 2322--2338, April 2014.
+
 \bibitem{7450161}
 N.~Wei, X.~Lin, and Z.~Zhang, ``{Optimal Relay Probing in Millimeter-Wave
   Cellular Systems With Device-to-Device Relaying},'' \emph{IEEE Transactions
   on Vehicular Technology}, vol.~65, no.~12, pp. 10\,218--10\,222, Dec 2016.
-
-\bibitem{6940431}
-P.~Li, S.~Guo, T.~Miyazaki, and W.~Zhuang, ``{Fine-grained resource allocation
-  for cooperative device-to-device communication in cellular networks},''
-  \emph{IEEE Wireless Communications}, vol.~21, no.~5, pp. 35--40, October
-  2014.
 
 \bibitem{7752964}
 A.~Alabbasi and B.~Shihada, ``{Optimal Cross-Layer Design for Energy Efficient
@@ -97,11 +85,6 @@ A.~Alabbasi and B.~Shihada, ``{Optimal Cross-Layer Design for Energy Efficient
 N.~Zlatanov, A.~Ikhlef, T.~Islam, and R.~Schober, ``{Buffer-aided cooperative
   communications: opportunities and challenges},'' \emph{IEEE Communications
   Magazine}, vol.~52, no.~4, pp. 146--153, April 2014.
-
-\bibitem{7562509}
-J.~Hajipour, C.~Leung, and J.~M. Niya, ``{Context-Aware Relay Selection in
-  Buffer-Aided Wireless Relay Networks},'' \emph{IEEE Communications Letters},
-  vol.~20, no.~12, pp. 2502--2505, Dec 2016.
 
 \bibitem{6560489}
 D.~Feng, L.~Lu, Y.~Yuan-Wu, G.~Y. Li, G.~Feng, and S.~Li, ``{Device-to-Device
