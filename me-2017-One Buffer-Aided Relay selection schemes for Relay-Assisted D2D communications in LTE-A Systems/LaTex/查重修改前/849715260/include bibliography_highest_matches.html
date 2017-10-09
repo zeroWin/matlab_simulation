@@ -1,0 +1,612 @@
+
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Turnitin, LLC" />
+    <meta name="keywords" content="" /> 
+    <meta name="description" content="" />
+    <meta name="viewport" content="width = initial-scale" />
+    <meta name="viewport" content="height = initial-scale" />
+    
+<title>Turnitin 原创性报告</title>
+
+<base href="http://turnitin.com">
+<style type="text/css">
+	
+body	{
+	color: #000;
+	background: #ddd;
+	padding: 0;
+	border: 0;
+	font: 14px Arial, Verdana, sans-serif;
+	margin: 0;
+	text-align: center;
+	}
+	
+form	{
+	padding: 0;
+	margin: 0;
+	}
+	
+p	{
+	padding: .8em 1.5em;
+	margin: 0;
+	text-align: left;
+	}
+	
+img	{
+	border: 0;
+	padding: 0;
+	}
+
+div	{
+	padding: 0;
+	border: 0;
+	text-align: left;
+	}
+	
+strong	{
+	font-weight: bold;
+	}
+	
+h2	{
+	font-size: 15px;
+	margin: 20px 0 10px 20px;
+	}
+	
+a:link, a:visited	{
+	text-decoration: underline;
+	color: #00f;
+	}
+	
+a:hover, a:active	{
+	text-decoration: underline;
+	color: #888;
+	}
+	
+img#logo	{
+	float: right;
+	padding-right: 20px;
+	padding-top: 10px;
+	}
+	
+div#container	{
+	border: 1px solid #aaa;
+	width: 770px;
+	margin: 20px auto;
+	background: #fff;
+	padding: 10px 0;
+	}
+	
+div#top	{
+	background: #fff;
+	width: 7in;
+	margin: auto;
+	padding-bottom: 15px;
+	}
+	
+div#content	{
+	background: #fff;
+	}
+	
+#top p	{
+	padding: .3em 0 .3em 20px;
+	}
+
+#top span	{
+	padding-right: 35px;
+	}
+	
+#top p#orig	{
+	padding-top: 15px;
+	}
+	
+#orig span#score.red	{
+	border-right: 18px solid red;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.orange	{
+	border-right: 18px solid orange;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.yellow	{
+	border-right: 18px solid yellow;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.green	{
+	border-right: 18px solid green;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+#orig span#score.blue	{
+	border-right: 18px solid blue;
+	padding: .2em .5em;
+	margin: 0 1em;
+	background: white;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #888;
+	border-left: 1px solid #888;
+	}
+	
+div.divider	{
+	width: 7in;
+	border: 1px dotted #888;
+	margin: auto;
+	padding: 4px 0 4px 10px;
+	font-weight: bold;
+	background: #ddd;
+	font-size: 15px;
+	}
+	
+div.links	{
+	width: 7in;
+	margin: auto;
+	}
+	
+.links div	{
+	padding: 15px 20px 15px 20px;
+	border-bottom: 1px dotted #888;
+	}
+	
+.links div#last	{
+	padding: 15px 20px 20px 20px;
+	border-bottom: 0;
+	}
+	
+div.number	{
+	float: right;
+	background: white;
+	border: 1px solid #888;
+	margin: 0 0 0 20px;
+	padding: .1em .5em;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	}
+	
+div.number-l	{
+	float: left;
+	background: white;
+	border: 1px solid #888;
+	margin: 6px 16px 10px 0;
+	padding: .1em .5em;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 20px;
+	}
+	
+.links div p	{
+	padding: .2em 1.5em .4em 0;
+	}
+	
+.links div p#mess	{
+	padding: .2em 1.5em 0 0;
+	}
+	
+div#body	{
+	line-height: 1.5em;
+	width: 7in;
+	margin: auto;
+	padding-bottom: 20px;
+	}
+	
+#body p	{
+	color: #555;
+	padding-top: 30px;
+	line-height: 20px;
+	}
+
+	
+#body a	{
+	display: block;
+	color: red;
+	margin: 1em 3em;
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 1em 1em;
+	border: 1px dotted #888;
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: none;
+	line-height: 26px;
+	background: #FFFFE5;
+	}
+
+#body span	{
+	color: #555;
+	font-weight: normal;
+	font-size: 14px;
+	}
+
+#body span.number	{
+	display: block;
+	float: right;
+	color: #000;
+	font-weight: normal;
+	border: 1px solid #888;
+	padding: 0 6px;
+	font-weight: bold;
+	margin-left: 15px;
+	font-size: .9em;
+	background: #fff;
+	}
+	
+#actions	{
+	display: none;
+	}
+
+</style>
+
+
+
+</head>
+
+<body id="or_print_report">
+
+
+<div id="container">
+
+<div id="top">
+    <div id="content">
+        <!-- ######### Top Body  ##########################--> 
+        <div id="top_body">
+            <p id="title">
+            <img src="/r/build/images/b3964fd7e38c8fcbb8bfbf2efc1f0635cb_turnitin_logo.gif" id="logo" width="60">
+            Turnitin 原创性报告
+            </p>
+                <div class="general_info">
+                    <p>
+                        <span>On Relay Selection Schemes for Relay-Assisted D2D Communications in LTE-A Systems</span>
+                        
+                        通过 ChaPaper
+                        
+                    </p>
+                    <p>
+                        从 001 (001)
+                    </p>
+                    <ul>
+                        <li>已处理到 20-9月-2017 07:00 CDT</li>
+                        <li>代码: 849715260</li>
+                        <li>字数: 4872</li>
+                    </ul>
+                </div>
+                <div class="similarity_box">
+                    <div class="overall_similarity">
+                        <div class="color_box orange">&nbsp;</div>
+                        <div class="similarity_title">相似度指标</div>
+                        <div class="similarity_percent">59%</div>
+                    </div>
+                    <div class="similarity_by_source">
+                        <div class="similarity_title">依來源标示相似度</div>
+                        <dl>
+                            <dt>Internet&nbsp;Sources:</dt>
+                            <dd>13%</dd>
+                            <div class="clear"></div>
+                            <dt>出版物:</dt>
+                            <dd>58%</dd>
+                            <div class="clear"></div>
+                            <dt>学生文稿:</dt>
+                            <dd>8%</dd>
+                            <div class="clear"></div>
+                        </dl>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                                 
+        </div>
+        <!-- ######### END Top Body  ##########################--> 
+    </div>
+</div>
+
+<div class="divider">来源:</div>
+
+<div class="links">
+
+	<div>
+	<div class="number-l">1</div>
+	<p>32% match (出版物)</p>
+
+	<a style="color:red" href="http://ieeexplore.ieee.org/document/7878672/">Ruofei Ma, Yao-Jen Chang, Hsiao-Hwa Chen, Chun-Yuan Chiu. "On Relay Selection Schemes for Relay-Assisted D2D Communications in LTE-A Systems", IEEE Transactions on Vehicular Technology, 2017</a>
+
+	</div>
+	<div>
+	<div class="number-l">2</div>
+	<p>14% match (出版物)</p>
+
+	<a style="color:green" href="http://ieeexplore.ieee.org/document/7562509/">Javad Hajipour, Cyril Leung, Javad Musevi Niya. "Context-Aware Relay Selection in Buffer-Aided Wireless Relay Networks", IEEE Communications Letters, 2016</a>
+
+	</div>
+	<div>
+	<div class="number-l">3</div>
+	<p>1% match (出版物)</p>
+
+	<a style="color:blue" href="http://ieeexplore.ieee.org/document/7564170/">Jen-Yi Pan, Ko-Wei Chang, Houng-Wei Lin. "Uplink Shared Resource Scheduling for Device-to-Device Underlay Communication with Least Transmission Power Resource Selection and Guaranteed Link Quality", 2016 International Conference on Networking and Network Applications (NaNA), 2016</a>
+
+	</div>
+	<div>
+	<div class="number-l">4</div>
+	<p>1% match (出版物)</p>
+
+	<a style="color:brown" href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=7396709">R. Chithra, Robert Bestak, Sarat Kumar Patra. "Hungarian Method Based Joint Transmission Mode and Relay Selection in Device-to-Device Communication", 2015 8th IFIP Wireless and Mobile Networking Conference (WMNC), 2015</a>
+
+	</div>
+	<div>
+	<div class="number-l">5</div>
+	<p>1% match (从 2017年09月09日 的网络)</p>
+
+	<a style="color:#ff6600" href="https://www.lkn.ei.tum.de/forschung/publikationen/dateien/Kluegel2016LeveragingTheD2D-Gain:Resource.pdf">https://www.lkn.ei.tum.de/forschung/publikationen/dateien/Kluegel2016LeveragingTheD2D-Gain:Resource.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">6</div>
+	<p>1% match (从 2017年01月01日 的网络)</p>
+
+	<a style="color:#630000" href="https://pdfs.semanticscholar.org/e963/c328f1eea9aaff6d814df4af3ba2bbaba4cd.pdf">https://pdfs.semanticscholar.org/e963/c328f1eea9aaff6d814df4af3ba2bbaba4cd.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">7</div>
+	<p>1% match (从 2017年08月28日 的网络)</p>
+
+	<a style="color:#009cff" href="http://www.ece.iisc.ernet.in/~cmurthy/lib/exe/fetch.php?media=sireesha_ncc_mar2017.pdf">http://www.ece.iisc.ernet.in/~cmurthy/lib/exe/fetch.php?media=sireesha_ncc_mar2017.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">8</div>
+	<p>1% match (出版物)</p>
+
+	<a style="color:#31ff00" href="http://ieeexplore.ieee.org/document/7895131/">Yufeng Zhan, Yuanqing Xia, Yang Liu, Fan Li, Yu Wang. "Time-sensitive Data Collection with Incentive-Aware for Mobile Opportunistic Crowdsensing", IEEE Transactions on Vehicular Technology, 2017</a>
+
+	</div>
+	<div>
+	<div class="number-l">9</div>
+	<p>1% match (从 2010年07月09日 的网络)</p>
+
+	<a style="color:#330099" href="http://www.ece.ucdavis.edu/people/profiles/zhao.html">http://www.ece.ucdavis.edu/people/profiles/zhao.html</a>
+
+	</div>
+	<div>
+	<div class="number-l">10</div>
+	<p>1% match (从 2017年07月25日 的网络)</p>
+
+	<a style="color:#00cc99" href="http://www.idc.lnt.de/en/forschung/buffer-aided-relaying/">http://www.idc.lnt.de/en/forschung/buffer-aided-relaying/</a>
+
+	</div>
+	<div>
+	<div class="number-l">11</div>
+	<p>1% match (出版物)</p>
+
+	<a style="color:#ff0063" href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=7501454">Miharu Oiwa, Shinya Sugiura. "Reduced-Packet-Delay Generalized Buffer-Aided Relaying Protocol: Simultaneous Activation of Multiple Source-to-Relay Links", IEEE Access, 2016</a>
+
+	</div>
+	<div>
+	<div class="number-l">12</div>
+	<p>1% match (出版物)</p>
+
+	<a style="color:#006331" href="http://ieeexplore.ieee.org/document/7880694/">Zheng Chen, Jemin Lee, Tony Q. S. Quek, Marios Kountouris. "Cooperative Caching and Transmission Design in Cluster-Centric Small Cell Networks", IEEE Transactions on Wireless Communications, 2017</a>
+
+	</div>
+	<div>
+	<div class="number-l">13</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#9966ff" href="http://dx.doi.org/10.1109/TCOMM.2013.071013.120787">Feng, Daquan, Lu Lu, Yi Yuan-Wu, Geoffrey Ye Li, Gang Feng, and Shaoqian Li. "Device-to-Device Communications Underlaying Cellular Networks", IEEE Transactions on Communications, 2013.</a>
+
+	</div>
+	<div>
+	<div class="number-l">14</div>
+	<p>< 1% match (从 2017年03月23日 来的学生文稿)</p>
+
+	<a style="color:#9c6331" href="/paperInfo.asp?r=45.2492743136691&svr=320&lang=zh_hans&oid=788472798&perc=0">Submitted to Massey University on 2017-03-23</a>
+
+	</div>
+	<div>
+	<div class="number-l">15</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#ce0031" href="http://dx.doi.org/10.1109/ICC.2016.7510700">Chen, Lei, F. Richard Yu, Hong Ji, Bo Rong, Xi Li, and Victor C.M. Leung. "Energy harvesting small cell networks with full-duplex self-backhaul and massive MIMO", 2016 IEEE International Conference on Communications (ICC), 2016.</a>
+
+	</div>
+	<div>
+	<div class="number-l">16</div>
+	<p>< 1% match (从 2017年03月31日 的网络)</p>
+
+	<a style="color:#cc9900" href="http://etds.lib.ncku.edu.tw/etdservice/view_metadata?etdun=U0026-0808201615010000">http://etds.lib.ncku.edu.tw/etdservice/view_metadata?etdun=U0026-0808201615010000</a>
+
+	</div>
+	<div>
+	<div class="number-l">17</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#63009c" href="http://dx.doi.org/10.1109/ICASSP.2016.7472347">AliHemmati, Ruhallah, Ben Liang, Min Dong, Gary Boudreau, and S. Hossein Seyedmehdi. "Multi-channel power allocation for device-to-device communication underlaying cellular networks", 2016 IEEE International Conference on Acoustics Speech and Signal Processing (ICASSP), 2016.</a>
+
+	</div>
+	<div>
+	<div class="number-l">18</div>
+	<p>< 1% match (从 2017年08月18日 来的学生文稿)</p>
+
+	<a style="color:#cc6600" href="/paperInfo.asp?r=45.2492743136691&svr=320&lang=zh_hans&oid=74908729&perc=0">Submitted to University of Sheffield on 2017-08-18</a>
+
+	</div>
+	<div>
+	<div class="number-l">19</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#cc0066" href="http://dx.doi.org/10.1109/CHINACOM.2015.7497901">Senyao Zheng, , Hui Zhao, Long Zhao, Jun Wang, and Da Fu. "A novel beamforming scheme based on partial channel feedback in LS-MIMO systems", 2015 10th International Conference on Communications and Networking in China (ChinaCom), 2015.</a>
+
+	</div>
+	<div>
+	<div class="number-l">20</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#33cc99" href="http://dx.doi.org/10.1007/11569596">Lecture Notes in Computer Science, 2005.</a>
+
+	</div>
+	<div>
+	<div class="number-l">21</div>
+	<p>< 1% match (从 2017年06月29日 的网络)</p>
+
+	<a style="color:#336699" href="https://arxiv.org/list/cs/1606?show=2000&skip=60">https://arxiv.org/list/cs/1606?show=2000&skip=60</a>
+
+	</div>
+	<div>
+	<div class="number-l">22</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:red" href="http://dx.doi.org/10.1109/WPMC.2014.7014882">Liang, Tao, Tiankui Zhang, Jinlong Cao, and Chunyan Feng. "Joint resource allocation and power control scheme for device-to-device communication underlaying cellular networks", 2014 International Symposium on Wireless Personal Multimedia Communications (WPMC), 2014.</a>
+
+	</div>
+	<div>
+	<div class="number-l">23</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:green" href="http://ieeexplore.ieee.org/document/7842233/">Shimin Gong, Yanyan Shen, Xiaoxia Huang, Sissi Xiaoxiao Wu, Anthony Man-Cho So. "Robust Relay Beamforming in Device-to-Device Networks with Energy Harvesting Constraints", 2016 IEEE Global Communications Conference (GLOBECOM), 2016</a>
+
+	</div>
+	<div>
+	<div class="number-l">24</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:blue" href="http://dx.doi.org/10.1109/WCNC.2009.4917868">Yan Zhang. "Optimal Resource Allocation for Energy Efficient Transmissions with QoS Constrains in Coded Cooperative Networks", 2009 IEEE Wireless Communications and Networking Conference, 04/2009</a>
+
+	</div>
+	<div>
+	<div class="number-l">25</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:brown" href="http://ieeexplore.ieee.org/document/7752964/">Abdulrahman Alabbasi, Basem Shihada. "Optimal Cross-Layer Design for Energy Efficient D2D Sharing Systems", IEEE Transactions on Wireless Communications, 2017</a>
+
+	</div>
+	<div>
+	<div class="number-l">26</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#ff6600" href="http://dx.doi.org/10.1007/978-3-319-30681-0">SpringerBriefs in Electrical and Computer Engineering, 2016.</a>
+
+	</div>
+	<div>
+	<div class="number-l">27</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#630000" href="http://dx.doi.org/10.1109/ACCESS.2016.2594216">Phan, Khoa T., and Tho Le-Ngoc. "Power Allocation for Buffer-Aided Full-Duplex Relaying with Imperfect Self-Interference (SI) Cancellation and Statistical Delay Constraint", IEEE Access, 2016.</a>
+
+	</div>
+	<div>
+	<div class="number-l">28</div>
+	<p>< 1% match (从 2017年03月31日 来的学生文稿)</p>
+
+	<a style="color:#009cff" href="/paperInfo.asp?r=45.2492743136691&svr=320&lang=zh_hans&oid=69790787&perc=0">Submitted to University of Sheffield on 2017-03-31</a>
+
+	</div>
+	<div>
+	<div class="number-l">29</div>
+	<p>< 1% match (从 2017年09月16日 的网络)</p>
+
+	<a style="color:#31ff00" href="http://www.ece.tamu.edu/~xizhang/papers/IEEE_J-SAC_D2D_Statistical_QoS_Provisioning_Paper_2015_Xi_Zhang.pdf">http://www.ece.tamu.edu/~xizhang/papers/IEEE_J-SAC_D2D_Statistical_QoS_Provisioning_Paper_2015_Xi_Zhang.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">30</div>
+	<p>< 1% match (从 2017年07月19日 的网络)</p>
+
+	<a style="color:#330099" href="http://tigre5-cm.es/sites/default/files/sitefiles/documents/04%20IMDEA%20CPS_D2D_Comsenets15.pdf">http://tigre5-cm.es/sites/default/files/sitefiles/documents/04%20IMDEA%20CPS_D2D_Comsenets15.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">31</div>
+	<p>< 1% match (从 2017年02月15日 的网络)</p>
+
+	<a style="color:#00cc99" href="https://people.maths.bris.ac.uk/~maxmr/lag/notes.pdf">https://people.maths.bris.ac.uk/~maxmr/lag/notes.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">32</div>
+	<p>< 1% match (从 2017年09月12日 的网络)</p>
+
+	<a style="color:#ff0063" href="http://eprints.kfupm.edu.sa/139828/1/Thesis_Last_Draft.pdf">http://eprints.kfupm.edu.sa/139828/1/Thesis_Last_Draft.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">33</div>
+	<p>< 1% match (从 2012年03月08日 的网络)</p>
+
+	<a style="color:#006331" href="http://comsnets.org/archive/2009/comsnets09-camera-12-20/comsnets09-final250.pdf">http://comsnets.org/archive/2009/comsnets09-camera-12-20/comsnets09-final250.pdf</a>
+
+	</div>
+	<div>
+	<div class="number-l">34</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#9966ff" href="http://dx.doi.org/10.4028/www.scientific.net/AMM.713-715.1208">Kou, Shuai Hua, Jun Sun, and Shi Xiang Shao. "Resource Allocation Scheme for Device-to-Device Communications Underlaying Cellular Networks to Maximize Overall Throughput", Applied Mechanics and Materials, 2015.</a>
+
+	</div>
+	<div>
+	<div class="number-l">35</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#9c6331" href="http://dx.doi.org/10.1080/17445760.2016.1157179">Wang, Jun, and Qilin Wu. "Relay selection for maximizing the number of successive transmission in cooperative networks", International Journal of Parallel Emergent and Distributed Systems, 2016.</a>
+
+	</div>
+	<div>
+	<div class="number-l">36</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#ce0031" href="http://dx.doi.org/10.1016/j.comcom.2009.07.004">Yang, X.. "Extending network lifetime for ALLIANCES", Computer Communications, 20091115</a>
+
+	</div>
+	<div>
+	<div class="number-l">37</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#cc9900" href="http://ieeexplore.ieee.org/document/7587807/">Hyun-Suk Lee, Jang-Won Lee. " QC LinQ: QoS and Channel-Aware Distributed Link Scheduler for D2D Communication ", IEEE Transactions on Wireless Communications, 2016</a>
+
+	</div>
+	<div id="last">
+	<div class="number-l">38</div>
+	<p>< 1% match (出版物)</p>
+
+	<a style="color:#63009c" href="http://dx.doi.org/10.1109/PIMRC.2014.7136264">Lu, Xiaomei, Wenjun Xu, Shengyu Li, Zhihui Liu, and Jiaru Lin. "Simultaneous wireless information and power transfer for cognitive two-way relaying networks", 2014 IEEE 25th Annual International Symposium on Personal Indoor and Mobile Radio Communication (PIMRC), 2014.</a>
+
+	</div>
+
+</div>
+
+
+
+<div class="divider">文稿正文</div>
+<div id="body">
+Joint <a href="javascript:openDSC(519371143, 37, '9748');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9748" name="2" style="color:green" class="green"><span class="b-ref">2</span>Energy-Aware and Buffer-Aided Relay Selection<span> Strategy </span>for</a> Relay-Assisted D2D Communications Lei Yu∗, Xiaoxiang Wang∗, Dongyu Wang∗? ∗ <a href="javascript:openDSC(59588704, 37, '21778');" onmouseover="doRollover(15);" onmouseout="undoRollover(15);" id="21778" name="15" style="color:#ce0031" class="#ce0031"><span class="b-ref">15</span>Key Lab. of Universal Wireless Comm., Ministry of Education, Beijing Univ. of Posts and Telecom.,<span> Beijing, </span>P.R. China</a> Email(s): {zzmikkz, cpwang, dy wang <a href="javascript:openDSC(54495300, 37, '18427');" onmouseover="doRollover(22);" onmouseout="undoRollover(22);" id="18427" name="22" style="color:red" class="red"><span class="b-ref">22</span>}@bupt.edu.cn Abstract—Device-to-device (D2D) communication is a<span> effective </span>technique</a> to improve performance on overall throughput and energy efficiency in cellular network. However, <a href="javascript:openDSC(255910441, 2909, '631');" onmouseover="doRollover(16);" onmouseout="undoRollover(16);" id="631" name="16" style="color:#cc9900" class="#cc9900"><span class="b-ref">16</span>due to<span> the </span>long separation<span> distances </span>or poor link quality between the source and destination user equipments (UEs),</a><a href="javascript:openDSC(538617862, 37, '9009');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9009" name="1" style="color:red" class="red"><span class="b-ref">1</span>the use of only direct D2D communications limits the advantages of D2D communications.</a> For enhancing traffic capacity in cellular network, <a href="javascript:openDSC(538617862, 37, '9017');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9017" name="1" style="color:red" class="red"><span class="b-ref">1</span>relay-assisted D2D communication was proposed as a<span> complement </span>to direct D2D communications.</a> The purpose of <a href="javascript:openDSC(538617862, 37, '9023');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9023" name="1" style="color:red" class="red"><span class="b-ref">1</span>this work<span> is </span>to design a relay selection strategy<span> that improve the </span>D2D</a> communication performance. <a href="javascript:openDSC(26852487, 37, '21381');" onmouseover="doRollover(36);" onmouseout="undoRollover(36);" id="21381" name="36" style="color:#ce0031" class="#ce0031"><span class="b-ref">36</span>In this paper, we propose an Energy-Aware</a> and Buffer-Aided (EABA) relay selection <a href="javascript:openDSC(538617862, 37, '9027');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9027" name="1" style="color:red" class="red"><span class="b-ref">1</span>scheme that considers several<span> conditions </span>jointly, including data rate, relay-<span> available </span>UE (RUE)<span> residual energy, </span>and</a> RUE buffer state. <a href="javascript:openDSC(519371143, 37, '9647');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9647" name="2" style="color:green" class="green"><span class="b-ref">2</span>Based on the channel states,<span> energy, </span>and</a> buffer size, a scheduling rule is calculated dynamically by the EABA relay selection scheme <a href="javascript:openDSC(519371143, 37, '9652');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9652" name="2" style="color:green" class="green"><span class="b-ref">2</span>at each time slot.<span> And then, </span>the scheduling rule specifies which of the source or relay nodes should use the channel for packet transmission.<span> Simulation </span>results<span> validate </span>the<span> performance of the </span>proposed</a><a href="javascript:openDSC(538617862, 37, '9038');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9038" name="1" style="color:red" class="red"><span class="b-ref">1</span>scheme in terms of total amount of data transmitted</a> and file transfer time under RUE residual energy and RUE buffer state. Keywords — Device-to-device communication, Relay selection, Limited energy, Buffer-Aided <a href="javascript:openDSC(55149404, 37, '17107');" onmouseover="doRollover(13);" onmouseout="undoRollover(13);" id="17107" name="13" style="color:#9966ff" class="#9966ff"><span class="b-ref">13</span>I. INTRODUCTION To satisfy the increasing demand<span> of </span>local traffic load and provide better user experience, device-to-device (D2D)<span> com- munications </span>have been proposed for</a> cellular network [? ? ? ]. <a href="javascript:openDSC(538617862, 37, '9044');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9044" name="1" style="color:red" class="red"><span class="b-ref">1</span>D2D communications can be classified into licensed- band D2D and unlicensed-band D2D [? ]. Working on<span> un- licensed </span>bands is commonly subject to uncontrolled<span> interfer- ence. </span>Hence, most of the existing works focused on licensed- band D2D communications, aiming to improve spectrum efficiency and cell-wise data transmission performance by encouraging flexible radio resource reuse and communication mode selection</a> [? ? ? ]. However, <a href="javascript:openDSC(538617862, 37, '9048');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9048" name="1" style="color:red" class="red"><span class="b-ref">1</span>most of the<span> recent </span>works<span> have </span>focused on<span> direct </span>D2D</a> (one-hop D2D) communications. <a href="javascript:openDSC(538617862, 37, '9053');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9053" name="1" style="color:red" class="red"><span class="b-ref">1</span>Only using direct D2D mode may limit the benefits brought in by<span> the </span>D2D<span> commu- nications </span>to<span> cellular network, </span>because source and destination<span> D2D-capable UEs </span>(DUEs) may not be able to perform direct D2D communications due to long separation distance and poor channel condition between them [? ]. In such cases, a promising way to<span> completely </span>explore the benefits of D2D<span> communications </span>is to enable<span> BS </span>-controlled D2D transmission through relays, which can substantially extend the range of D2D communications</a> [? ]. Compared to fixed relay [? ], the relay-capable UE <a href="javascript:openDSC(538617862, 37, '9062');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9062" name="1" style="color:red" class="red"><span class="b-ref">1</span>(RUE) assisted D2D communications may be more flexible due to an increase in UE density. Hence, most works considered the ”relays” in relay-involved D2D communications as RUEs.</a><a href="javascript:openDSC(538617862, 37, '9069');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9069" name="1" style="color:red" class="red"><span class="b-ref">1</span>This paper focuses on the relay-assisted D2D,</a> which <a href="javascript:openDSC(538617862, 37, '9063');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9063" name="1" style="color:red" class="red"><span class="b-ref">1</span>works in<span> the </span>way that two DUEs within an<span> BS’s </span>coverage communicate with each other, with the help of a relay-capable D2D UE under<span> BS’s </span>control</a> [? ? ]. <a href="javascript:openDSC(538617862, 37, '9072');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9072" name="1" style="color:red" class="red"><span class="b-ref">1</span>To develop relay-assisted D2D communications in<span> cellular </span>systems, the most critical issue is to select optimal relay UE for each D2D-capable communication pair in<span> BS </span>scheduling. Relay selection issues have been extensively studied in cooper- ative communications, ad hoc networks, and sensor networks. Most</a> works <a href="javascript:openDSC(519371143, 37, '9657');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9657" name="2" style="color:green" class="green"><span class="b-ref">2</span>assume that relaying procedure is performed in two consecutive time slots, where in the first slot, the source transmits to a relay and in the second slot, the relay forwards the received data to the destination. This relaying mechanism is referred to as conventional relaying</a> [? ]. Moreover, <a href="javascript:openDSC(538617862, 37, '9077');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9077" name="1" style="color:red" class="red"><span class="b-ref">1</span>most of the proposed relay selection strategies were designed in physical layer (PHY),</a> the residual energy and buffer state of candidate relay node was basically ignored. <a href="javascript:openDSC(538617862, 37, '9078');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9078" name="1" style="color:red" class="red"><span class="b-ref">1</span>Furthermore, the scenarios in most of these strategies did not include channel reuse.</a><a href="javascript:openDSC(538617862, 37, '9085');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9085" name="1" style="color:red" class="red"><span class="b-ref">1</span>In this paper, we treat relay-assisted D2D communication as a supplement to direct D2D communication in<span> cellular </span>systems, both of which should reuse the radio resources of general<span> cellular UEs </span>(CUEs). We</a> propose a joint <a href="javascript:openDSC(519371143, 37, '9751');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9751" name="2" style="color:green" class="green"><span class="b-ref">2</span>Energy- Aware and Buffer-Aided<span> (EABA) </span>relay selection</a> strategy <a href="javascript:openDSC(519371143, 37, '9659');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9659" name="2" style="color:green" class="green"><span class="b-ref">2</span>which uses the information about the channel conditions of the links, the residual energies and<span> buffer </span>states of the<span> RUEs </span>to compute a scheduling weight for each link at each time slot. The link with the highest weight is then selected to</a> transmit data instead of conventional relaying. <a href="javascript:openDSC(510313027, 37, '26951');" onmouseover="doRollover(23);" onmouseout="undoRollover(23);" id="26951" name="23" style="color:green" class="green"><span class="b-ref">23</span>The rest of this paper is organized as follows. We<span> introduce a </span>system model</a><a href="javascript:openDSC(538617862, 37, '9003');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9003" name="1" style="color:red" class="red"><span class="b-ref">1</span>for relay-assisted D2D communications in</a> cellular network and formulates optimization problems in Sec- CUE CC1 CUE CM BS CUE Ck RUE R2 DUE S RUE Rj DUE D RUE R1 RUE RN <a href="javascript:openDSC(538617862, 37, '9119');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9119" name="1" style="color:red" class="red"><span class="b-ref">1</span>CUE: Cellular UE<span> Cellular uplink </span>RUE: Relay capable UE D2D<span> link DUE: D2D </span>UE</a><a href="javascript:openDSC(538617862, 37, '9123');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9123" name="1" style="color:red" class="red"><span class="b-ref">1</span>Interference link Fig. 1. A single cell system model for D2D communications underlaying cellular architecture, in which<span> uplink </span>channel of CUE<span> Ck </span>is reused by a D2D link. DUEs S and D are the source and destination D2D UEs, respectively. RUE<span> Rj </span>is the selected relay UE for relay-assisted D2D communications.</a> In addition, assume <a href="javascript:openDSC(538617862, 37, '9169');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9169" name="1" style="color:red" class="red"><span class="b-ref">1</span>that the<span> BS </span>can obtain accurate channel state information (CSI) of all links. The<span> BS </span>is in charge of the entire cell and makes final decisions on D2D mode, relay UE, and reuse channel selection.<span> We </span>also<span> assume </span>that a minimum transmission quality should be met in terms of end-to-end signal to interference and noise ratio (SINR) for both cellular uplinks and D2D links. We consider a channel model between two UEs or between a UE and the<span> BS </span>as follows [? ] : |ha,b|2<span> = K0βa,bζa </span>,b<span> · L </span>−a,</a> αb <a href="javascript:openDSC(538617862, 37, '9179');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9179" name="1" style="color:red" class="red"><span class="b-ref">1</span>(1) in which path loss, slow fading, and fast fading are taken into account.<span> |ha </span>,b|2 is the channel gain from transmitter a to receiver b.<span> K0 </span>is a constant corresponding to the path loss model.<span> βa </span>,b</a> and ζa <a href="javascript:openDSC(538617862, 37, '9184');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9184" name="1" style="color:red" class="red"><span class="b-ref">1</span>,b denote slow and fast fading gains,<span> respec- tively. </span>The slow fading<span> is </span>usually log-<span> normally distributed </span>and</a> fast fading is exponentially distributed. La <a href="javascript:openDSC(538617862, 37, '9183');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9183" name="1" style="color:red" class="red"><span class="b-ref">1</span>,b is the distance between a and b. α is the path loss exponent.</a> The goal of this paper <a href="javascript:openDSC(519371143, 37, '9684');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9684" name="2" style="color:green" class="green"><span class="b-ref">2</span>is to efficiently utilize the energy resources of the nodes as well as time and space diversity to minimize the transfer time of a file with<span> Q </span>packets, from the source to the destination before the network becomes<span> unavailable. </span>Let T<span> (χ) </span>denote the file transfer time achieved with strategy<span> χ, </span>i.e., the time interval since packet 1 is transmitted at the source node until packet N is received at the destination node, the</a><a href="javascript:openDSC(519371143, 37, '9667');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9667" name="2" style="color:green" class="green"><span class="b-ref">2</span>problem can be stated as min T</a> (χ) χ (2) tion II. A joint <a href="javascript:openDSC(519371143, 37, '9753');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9753" name="2" style="color:green" class="green"><span class="b-ref">2</span>Energy-Aware and Buffer-Aided<span> (EABA) </span>relay</a> subject to Tj ≤ τj (1), ∀j, (2a) selection strategy is proposed in Section III. The simulation j∑∈ [1, 2, . . . , N ] , (2b) results and analysis <a href="javascript:openDSC(59566801, 37, '15830');" onmouseover="doRollover(27);" onmouseout="undoRollover(27);" id="15830" name="27" style="color:#630000" class="#630000"><span class="b-ref">27</span>are presented in Section<span> IV, </span>followed by the conclusions in Section</a> V. where Tj denote RUE Rj total working time, and τj(1) denote the residual work time of relay Rj in time slot 1. ∑ II. <a href="javascript:openDSC(53139349, 37, '22523');" onmouseover="doRollover(38);" onmouseout="undoRollover(38);" id="22523" name="38" style="color:#63009c" class="#63009c"><span class="b-ref">38</span>SYSTEM MODEL AND<span> PROBLEM </span>FORMULATION<span> III. EABA </span>RELAY SELECTION</a> STRATEGY <a href="javascript:openDSC(519371143, 37, '9662');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9662" name="2" style="color:green" class="green"><span class="b-ref">2</span>As shown in Fig. 1, we consider a network that consists</a><a href="javascript:openDSC(538617862, 37, '9190');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9190" name="1" style="color:red" class="red"><span class="b-ref">1</span>As mentioned earlier, the<span> BS </span>needs to select an optimal</a> links of <a href="javascript:openDSC(538617862, 37, '9130');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9130" name="1" style="color:red" class="red"><span class="b-ref">1</span>CUEs, RUEs, DUEs, which are all under the control</a><a href="javascript:openDSC(538617862, 37, '9192');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9192" name="1" style="color:red" class="red"><span class="b-ref">1</span>according to end-to-end data rate, RUE<span> residual energies </span>and</a> of BS. <a href="javascript:openDSC(538617862, 37, '9136');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9136" name="1" style="color:red" class="red"><span class="b-ref">1</span>We assume that there is only one pair of DUEs</a> RUE buffer states. Hence, in this section, we demonstrate the in the cell and <a href="javascript:openDSC(538617862, 37, '9137');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9137" name="1" style="color:red" class="red"><span class="b-ref">1</span>presume that there are totally<span> M </span>CUEs</a> methods of estimation of the <a href="javascript:openDSC(538617862, 37, '9198');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9198" name="1" style="color:red" class="red"><span class="b-ref">1</span>end-to-end data rates of</a> the links <a href="javascript:openDSC(538617862, 37, '9139');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9139" name="1" style="color:red" class="red"><span class="b-ref">1</span>communicating with the<span> BS </span>via ordinary cellular uplinks.</a> between DUEs and RUEs, the residual energies and buffer <a href="javascript:openDSC(538617862, 37, '9141');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9141" name="1" style="color:red" class="red"><span class="b-ref">1</span>There are totally<span> N </span>RUEs, which are idle cellular users and</a> states of RUEs. We will also propose a relay selection strategy the <a href="javascript:openDSC(538617862, 37, '9143');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9143" name="1" style="color:red" class="red"><span class="b-ref">1</span>candidate relay UEs that can be used to form relay- to<span> address the problem </span>in</a> Section II. <a href="javascript:openDSC(538617862, 37, '9146');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9146" name="1" style="color:red" class="red"><span class="b-ref">1</span>assisted D2D path. To simplify mathematical expressions in</a> A. Link Data Rate Estimation the following sections, let C1,C2,...,Ci,...,CM denote M CUEs, and R1,R2,...,Rj,...,RN denote N RUEs, i.e., As shown in Fig. 1, the link data rate is derived in this <a href="javascript:openDSC(6914661, 2909, '5696');" onmouseover="doRollover(31);" onmouseout="undoRollover(31);" id="5696" name="31" style="color:#00cc99" class="#00cc99"><span class="b-ref">31</span>i ∈ [1,2,...,M] and j ∈ [1,<span> 2 </span>,...,N]. The</a> two DUEs are subsection. Let PCi,PS, and PRj represent the transmit power <a href="javascript:openDSC(538617862, 37, '9147');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9147" name="1" style="color:red" class="red"><span class="b-ref">1</span>denoted by S and D, respectively, where the former is the<span> of </span>the<span> CUE Ci, </span>the<span> source </span>DUE,</a> and RUE Rj, respectively. <a href="javascript:openDSC(538617862, 37, '9151');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9151" name="1" style="color:red" class="red"><span class="b-ref">1</span>source DUE and the later the destination DUE.<span> In addition, we </span>assume that</a> the noise n0 at each receiver UE <a href="javascript:openDSC(538617862, 37, '9153');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9153" name="1" style="color:red" class="red"><span class="b-ref">1</span>Furthermore, assume that<span> M </span>CUEs are assigned</a> M separat- <a href="javascript:openDSC(538617862, 37, '9203');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9203" name="1" style="color:red" class="red"><span class="b-ref">1</span>is additive white Gaussian noise (AWGN) with zero mean and</a> ed <a href="javascript:openDSC(538617862, 37, '9155');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9155" name="1" style="color:red" class="red"><span class="b-ref">1</span>cellular uplink channels by an<span> BS. </span>All channels have same</a> variance σ2, i.e., n0 ∼ (0,σ2). RUE Rj is assumed to work on <a href="javascript:openDSC(538617862, 37, '9158');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9158" name="1" style="color:red" class="red"><span class="b-ref">1</span>bandwidth. Channel reuse is permitted for each of them. The</a> half-duplex mode. If link S → Rj is selected as a transmission <a href="javascript:openDSC(538617862, 37, '9159');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9159" name="1" style="color:red" class="red"><span class="b-ref">1</span>D2D communication only<span> reuse </span>these uplink channels.</a> Under link and the uplink channel of Ci (i ∈ [1,2,...,M]) is <a href="javascript:openDSC(538617862, 37, '9164');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9164" name="1" style="color:red" class="red"><span class="b-ref">1</span>these conditions,we consider the interference from potential<span> selected as </span>the</a> reuse channel, the received signal at Rj can be <a href="javascript:openDSC(538617862, 37, '9167');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9167" name="1" style="color:red" class="red"><span class="b-ref">1</span>reused CUEs to the relay UE and destination DUE and the<span> expressed as </span>interference from the source DUE and relay UE to the</a> BS. ySi,Rj = hS,Rj · xS + hCi,Rj · xCi + n0 (3) where xS <a href="javascript:openDSC(538617862, 37, '9209');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9209" name="1" style="color:red" class="red"><span class="b-ref">1</span>is the signal transmitted from the source DUE S,</a> hCi,Rj ·xCi <a href="javascript:openDSC(538617862, 37, '9210');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9210" name="1" style="color:red" class="red"><span class="b-ref">1</span>denote the received interference from CUE<span> Ci </span>at</a> Rj. If link Rj → D is selected as a transmission link and the uplink channel of Ck <a href="javascript:openDSC(538617862, 37, '9206');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9206" name="1" style="color:red" class="red"><span class="b-ref">1</span>(k ∈ [1,2,...,<span> M]) is </span>selected as the reuse</a> channel, the received signal at destination DUE D <a href="javascript:openDSC(18947018, 37, '17891');" onmouseover="doRollover(24);" onmouseout="undoRollover(24);" id="17891" name="24" style="color:blue" class="blue"><span class="b-ref">24</span>can be expressed as<span> yRkj </span>,D<span> = hRj </span>,D</a> · xRj + hCk,D · xCk + n0 (4) <a href="javascript:openDSC(18947018, 37, '17896');" onmouseover="doRollover(24);" onmouseout="undoRollover(24);" id="17896" name="24" style="color:blue" class="blue"><span class="b-ref">24</span>where xS is the signal transmitted</a> from Rj, hCk,D·xCk <a href="javascript:openDSC(538617862, 37, '9212');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9212" name="1" style="color:red" class="red"><span class="b-ref">1</span>denote the received interference from CUE<span> Ck </span>at</a> destination <a href="javascript:openDSC(538617862, 37, '9214');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9214" name="1" style="color:red" class="red"><span class="b-ref">1</span>DUE D. The corresponding SINR at<span> Rj </span>and<span> destination </span>DUE D are</a> γSi,Rj = PCiP|hSC|hi,SR,jR|2j|+2σ2,γRkj,D = PCPk|RhjC|hk,RDj|,2D+|2σ2 (5) <a href="javascript:openDSC(58321918, 37, '17803');" onmouseover="doRollover(26);" onmouseout="undoRollover(26);" id="17803" name="26" style="color:#ff6600" class="#ff6600"><span class="b-ref">26</span>respectively. The achievable data rate of<span> link S → Rj </span>and<span> Rj → D </span>can be expressed as</a> RS,Rj = B log2(1 + γSi,Rj ), RRj ,D = B log2(1 + γRkj ,D ) (6) respectively, <a href="javascript:openDSC(538617862, 37, '9218');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9218" name="1" style="color:red" class="red"><span class="b-ref">1</span>where B is channel bandwidth. Similarly, for the reused cellular uplink<span> channel, </span>SINR at the<span> BS </span>is<span> γCji </span>,B</a> = PSP|ChiS|,hBC|i2,B+|2σ2 , γCjk,B = PRPj|ChkR|hj,CBk|,2D+|2σ2 (7) <a href="javascript:openDSC(538617862, 37, '9224');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9224" name="1" style="color:red" class="red"><span class="b-ref">1</span>respectively, where B in the subscripts</a> denote BS. B. RUE Residual Energy And Buffer State Estimation <a href="javascript:openDSC(519371143, 37, '9693');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9693" name="2" style="color:green" class="green"><span class="b-ref">2</span>Note that due to the limited energies of the relays, each relay can transmit a limited number of packets before it runs out of energy. Hence, even if a relay has enough space in its buffer, there is no point in sending more packets to it than it can forward later.<span> To take </span>this</a> into account,we should know the data size can be transmitted of RUE Ri under the residual energy. Let E1, E2, . . . , Ej, . . . , EN denote the total energies of N RUEs, respectively. <a href="javascript:openDSC(538617862, 37, '9231');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9231" name="1" style="color:red" class="red"><span class="b-ref">1</span>To capture the relationship between remaining operation time and transmit power for each RUE, an empirical<span> mode, </span>i.e., Peukert’s Law [? ], is adopted here as</a> τj = Ej /Ijα (8) where τj <a href="javascript:openDSC(538617862, 37, '9233');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9233" name="1" style="color:red" class="red"><span class="b-ref">1</span>denotes the<span> remain </span>operation time of<span> Rj </span>with a transmit power</a> PRj, Ij <a href="javascript:openDSC(538617862, 37, '9236');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9236" name="1" style="color:red" class="red"><span class="b-ref">1</span>is discharge current, and α is a constant to indicate the non-linear effect and its value is around 1.3</a> [? ]. <a href="javascript:openDSC(538617862, 37, '9228');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9228" name="1" style="color:red" class="red"><span class="b-ref">1</span>Assume that if transmit power of<span> Rj </span>is<span> PRj, </span>the</a><a href="javascript:openDSC(538617862, 37, '9237');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9237" name="1" style="color:red" class="red"><span class="b-ref">1</span>discharge current can be expressed by discharge voltage and total power consumed, i.e.,</a> Ij = PRj/V0, where V0 denote the <a href="javascript:openDSC(538617862, 37, '9238');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9238" name="1" style="color:red" class="red"><span class="b-ref">1</span>discharge voltage of each UE. Without loss of generality, we assume the same</a> V0 <a href="javascript:openDSC(538617862, 37, '9240');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9240" name="1" style="color:red" class="red"><span class="b-ref">1</span>for all UEs. Hence, if<span> residual </span>energy,<span> transmit power, </span>and discharge voltage are known for each RUE, the remaining operation time can be estimated.</a> In this paper, the transmit power of all UEs are predefined as a fixed value, so we can use the remaining operation time τj denotes the residual energy of RUE Rj. 500 400 300 Evolved Node B (eNB) 200 Cell coverage 100 Distance between DUEs 0 Source DUE -100 Destination DUE -200 Cellular UE (CUE) -300 Relay capable UE (RUE) -400 -500 -500 -400 -300 -200 -100 0 100 200 300 400 500 Fig. 2. <a href="javascript:openDSC(538617862, 37, '9276');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9276" name="1" style="color:red" class="red"><span class="b-ref">1</span>Simulation scenario for the proposed relay selection scheme, where the numbers of CUEs and RUEs are 20 and 10, respectively. The distance between the source and destination DUEs is</a> 220m. Then the minimum data size can be transmitted of RUE Rj can be expressed as θj = Rmin · τj (9) where Rmin is the minimum transmission speed of RUE Rj . <a href="javascript:openDSC(519371143, 37, '9668');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9668" name="2" style="color:green" class="green"><span class="b-ref">2</span>Without loss of generality, we assume that a time slot is of unit duration, and therefore if a<span> relay </span>transmits in a slot, its residual energy is reduced by the amount of its transmission<span> time, </span>e.g.,<span> τj </span>(t+1)<span> = τj </span>(t)−<span> tranj </span>(t),<span> where tranj </span>(t)<span> denotes </span>the<span> transmission time </span>of<span> RUE Rj to </span>the</a> destination. Let Qj <a href="javascript:openDSC(519371143, 37, '9678');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9678" name="2" style="color:green" class="green"><span class="b-ref">2</span>(t) denote the number of packets<span> stored </span>in the buffer of<span> RUE Rj </span>at the beginning of time slot t, and<span> ej </span>(t)</a> = Lj − Qj (t), where Lj denotes the total buffer size of RUE Rj , so ej (t) is the buffer size of RUE Rj can be used <a href="javascript:openDSC(519371143, 37, '9682');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9682" name="2" style="color:green" class="green"><span class="b-ref">2</span>at the beginning of time slot t. And<span> then, the tranj </span>(t)</a> can be expressed as tranj <a href="javascript:openDSC(53499676, 37, '29139');" onmouseover="doRollover(20);" onmouseout="undoRollover(20);" id="29139" name="20" style="color:#33cc99" class="#33cc99"><span class="b-ref">20</span>(t) = T<span> RRj </span>,D (t) · T<span> ≤ Qj </span>(t)<span> {Qj </span>(t)/<span> RRj </span>,D (t)<span> RRj ,D </span>(t) · T<span>&gt;</span><span> Qj </span>(t)<span> (10) where </span>T</a><a href="javascript:openDSC(1315810104, 2909, '7216');" onmouseover="doRollover(30);" onmouseout="undoRollover(30);" id="7216" name="30" style="color:#330099" class="#330099"><span class="b-ref">30</span>is duration of a time slot,<span> and RRj ,D </span>(t) is the</a><a href="javascript:openDSC(519371383, 37, '23819');" onmouseover="doRollover(37);" onmouseout="undoRollover(37);" id="23819" name="37" style="color:#cc9900" class="#cc9900"><span class="b-ref">37</span>data rate of link<span> Rj → D at </span>time slot t.</a> C. EABA Strategy <a href="javascript:openDSC(519371143, 37, '9695');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9695" name="2" style="color:green" class="green"><span class="b-ref">2</span>In order to transfer the packets of a file in a short period of time,</a> Energy-Aware and Buffer-Aided (EABA) <a href="javascript:openDSC(519371143, 37, '9696');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9696" name="2" style="color:green" class="green"><span class="b-ref">2</span>works based on the following<span> theory based: </span>if a relay has</a> high residual energy <a href="javascript:openDSC(519371143, 37, '9698');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9698" name="2" style="color:green" class="green"><span class="b-ref">2</span>and many empty spaces in its buffer, it should get a higher chance for reception.</a> On the other hand, if it has a large number of data in its buffer, <a href="javascript:openDSC(519371143, 37, '9703');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9703" name="2" style="color:green" class="green"><span class="b-ref">2</span>it should have a higher chance for transmitting a packet to the destination. Moreover, if a link has a high</a> SINR, more data will be transmitted at a time slot, <a href="javascript:openDSC(519371143, 37, '9704');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9704" name="2" style="color:green" class="green"><span class="b-ref">2</span>it should get a higher priority. In the<span> EABA </span>strategy, relay<span> Rj </span>computes the weight for its incoming link as</a> WS→Rj =min(θj−Qj,ej)·RS→Rj·I[γS→Rj ≥γd)] (11) <a href="javascript:openDSC(519371143, 37, '9710');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9710" name="2" style="color:green" class="green"><span class="b-ref">2</span>where I [x] is the indicator function, which is 1 if x is true and zero otherwise. Thus,</a> a link S → Rj get a positive weight <a href="javascript:openDSC(519371143, 37, '9736');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9736" name="2" style="color:green" class="green"><span class="b-ref">2</span>Algorithm 1<span> EABA </span>Relay Selection Strategy 1: Each relay computes</a> the minimum data size can be transmitted using (9). 2: Each relay <a href="javascript:openDSC(519371143, 37, '9707');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9707" name="2" style="color:green" class="green"><span class="b-ref">2</span>computes the weight for its incoming link</a> using (11). 3: Each relay <a href="javascript:openDSC(519371143, 37, '9708');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9708" name="2" style="color:green" class="green"><span class="b-ref">2</span>computes the weight for its<span> outgoing </span>link</a> using (12). 4: <a href="javascript:openDSC(519371143, 37, '9738');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9738" name="2" style="color:green" class="green"><span class="b-ref">2</span>In a distributed way, the best link is selected based on</a> (13). only if relay Rj has enough buffer space and residual energy, and the link SINR must no less than the predefined SINR requirement for D2D link. Similarly, <a href="javascript:openDSC(519371143, 37, '9711');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9711" name="2" style="color:green" class="green"><span class="b-ref">2</span>for its outgoing link, relay<span> Rj </span>computes the weight as<span> WRj </span>→D</a> = Qj · RRj→D · I[γRj→D ≥ γd)] (12) According to (12), a link Rj → D get <a href="javascript:openDSC(519371143, 37, '9714');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9714" name="2" style="color:green" class="green"><span class="b-ref">2</span>a positive weight only if relay<span> Rj </span>has</a> data stored in its buffer, and the link SINR must not less than the predefined SINR requirement for D2D link. <a href="javascript:openDSC(519371143, 37, '9717');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9717" name="2" style="color:green" class="green"><span class="b-ref">2</span>After computing the weights according to<span> EABA strategy, </span>the link l∗ from among all the S<span> → Rj </span>and<span> Rj → </span>D links is activated, where l∗ = arg max<span> {Wl} (13) </span>l∈{</a> S→Rj }∪{Rj <a href="javascript:openDSC(519371143, 37, '9722');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9722" name="2" style="color:green" class="green"><span class="b-ref">2</span>→D} Algorithm 1 summarizes all the steps of the<span> EABA </span>scheme. Note that the<span> EABA </span>strategy is based on the local information about the channel states, residual energy and<span> buffer </span>size in each relay. Therefore, it can be implemented in a distributed way similar to the opportunistic carrier sensing technique<span> proposed </span>in</a> a previous study [? ]. <a href="javascript:openDSC(519371143, 37, '9730');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9730" name="2" style="color:green" class="green"><span class="b-ref">2</span>Specifically, the timer of the relay with the highest weight will expire first. That relay will broadcast a flag packet signaling its priority to other relays and notifying whether the source should transmit to it or the relay itself will transmit. The above procedure continues as long as the network is operable. According to the earlier<span> discussion </span>about the<span> EABA scheme, </span>if there<span> are some data </span>in the buffer of</a> Rj , Rj will have enough energy to transmit that data. <a href="javascript:openDSC(519371143, 37, '9734');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9734" name="2" style="color:green" class="green"><span class="b-ref">2</span>Considering that the probability of having a good channel condition for link<span> Rj → </span>D is non-zero, there will be a</a><a href="javascript:openDSC(519371143, 37, '9739');" onmouseover="doRollover(2);" onmouseout="undoRollover(2);" id="9739" name="2" style="color:green" class="green"><span class="b-ref">2</span>time slot in the future in which that<span> data </span>will be transmitted by<span> Rj </span>and received successfully at the destination. Therefore, when the network becomes inoperable, there will be no<span> data </span>remaining in the buffer of relay<span> Rj . </span>IV.<span> SIMULATION </span>RESULTS In this section, the</a><a href="javascript:openDSC(538617862, 37, '9292');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9292" name="1" style="color:red" class="red"><span class="b-ref">1</span>proposed relay selection scheme is evaluated via<span> simulations </span>in MATLAB. The scenario is a single cell with its radius equal to 500 meters. All CUEs are<span> random </span>distributed in the cell. There are only two DUEs to<span> perfom </span>D2D<span> communication, </span>i.e., the source and destination.</a><a href="javascript:openDSC(538617862, 37, '9297');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9297" name="1" style="color:red" class="red"><span class="b-ref">1</span>All RUEs are<span> random </span>distributed in a circular area with the</a><a href="javascript:openDSC(4007177614, 943, '4051');" onmouseover="doRollover(33);" onmouseout="undoRollover(33);" id="4051" name="33" style="color:#006331" class="#006331"><span class="b-ref">33</span>TABLE I SIMULATION PARAMETERS Parameters Value Cell radius</a><a href="javascript:openDSC(538617862, 37, '9316');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9316" name="1" style="color:red" class="red"><span class="b-ref">1</span>Noise power spectral density Transmit power of UEs</a><a href="javascript:openDSC(538617862, 37, '9314');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9314" name="1" style="color:red" class="red"><span class="b-ref">1</span>Path loss exponent (α) Path loss constant</a> (K0) <a href="javascript:openDSC(538617862, 37, '9318');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9318" name="1" style="color:red" class="red"><span class="b-ref">1</span>SINR requirements for<span> cellu- lar </span>and D2D links</a> (γc, γd) 500 m -174 dBm/Hz 24 dBm 4 0.01 20 dB Slow fading coefficient (βa,b) Fast fading coefficient (ζa,b) Number of packet in source DUE <a href="javascript:openDSC(538617862, 37, '9248');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9248" name="1" style="color:red" class="red"><span class="b-ref">1</span>Number of data bits in a</a> pack- et <a href="javascript:openDSC(538617862, 37, '9322');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9322" name="1" style="color:red" class="red"><span class="b-ref">1</span>Duration of a time slot (△T</a> ) RUE total energy (Ei) Log-normal distrubution <a href="javascript:openDSC(538617862, 37, '9320');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9320" name="1" style="color:red" class="red"><span class="b-ref">1</span>with standard deviation of 8 dB</a> and zero mean Exponential distribution with unit mean 50 1024 bits 1µs Randomly distributed in [0,1440] mAh <a href="javascript:openDSC(538617862, 37, '9299');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9299" name="1" style="color:red" class="red"><span class="b-ref">1</span>source DUE as its center. Fig.<span> 2 </span>shows the scenario, and Table I lists<span> primary </span>parameters used therein. Note that all UEs are re-deployed<span> random </span>according to the defined conditions in different experiments, and the same scenario was tested for<span> 100 </span>,000 times to get an average value.</a> The <a href="javascript:openDSC(538617862, 37, '9358');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9358" name="1" style="color:red" class="red"><span class="b-ref">1</span>proposed relay selection scheme, considering end-to- end data rate, RUE<span> residual energy </span>and</a> RUE buffer state, is validated by the simulations as shown in Fig. 3, 4, 5. <a href="javascript:openDSC(2026668849, 2909, '4103');" onmouseover="doRollover(32);" onmouseout="undoRollover(32);" id="4103" name="32" style="color:#ff0063" class="#ff0063"><span class="b-ref">32</span>To evaluate the<span> necessity </span>of the proposed relay selection</a> scheme, ”random relay selection”, ”rate based <a href="javascript:openDSC(538617862, 37, '9323');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9323" name="1" style="color:red" class="red"><span class="b-ref">1</span>relay selection” and<span> ”EABA </span>relay selection”<span> are </span>compared. In ”random relay selection”, the<span> BS </span>just<span> select </span>a<span> link </span>randomly from</a> link S → Rj and link Rj → D; in ”rate based relay selection”, the BS will select a link has maximum SINR, i.e., the maximum transfer rate, from link S → Rj and Rj → D; <a href="javascript:openDSC(538617862, 37, '9329');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9329" name="1" style="color:red" class="red"><span class="b-ref">1</span>whereas in the<span> ”EABA </span>relay selection”, the<span> BS </span>will select the optimal<span> link </span>in the evaluation process<span> which </span>is</a> proposed in Section III. <a href="javascript:openDSC(57274867, 37, '24502');" onmouseover="doRollover(35);" onmouseout="undoRollover(35);" id="24502" name="35" style="color:#9c6331" class="#9c6331"><span class="b-ref">35</span>All the<span> three </span>relay selection schemes assume that<span> direct D2D mode </span>is</a> unavailable. The three schemes are only working <a href="javascript:openDSC(538617862, 37, '9243');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9243" name="1" style="color:red" class="red"><span class="b-ref">1</span>in relay-assisted D2D mode. In</a> addition, we also ignore the time and energy consumption caused by calculation. <a href="javascript:openDSC(538617862, 37, '9334');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9334" name="1" style="color:red" class="red"><span class="b-ref">1</span>It is seen from Fig.<span> 3 </span>that the probability<span> of successful communications </span>using</a> random relay selection, rate based relay selection and EABA relay selection <a href="javascript:openDSC(538617862, 37, '9338');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9338" name="1" style="color:red" class="red"><span class="b-ref">1</span>decreases as the distance between DUEs S and D increases. This is reasonable, as the</a> average distance between random distributed RUEs and DUEs will increase with the increasing <a href="javascript:openDSC(538617862, 37, '9339');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9339" name="1" style="color:red" class="red"><span class="b-ref">1</span>distance between DUEs S and D.</a> So the <a href="javascript:openDSC(538617862, 37, '9340');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9340" name="1" style="color:red" class="red"><span class="b-ref">1</span>channel gain for link between DUEs and<span> RUEs </span>will decrease with an increasing separation, which will reduce the<span> success probability </span>of D2D communication.</a> Specifically, the strategy <a href="javascript:openDSC(538617862, 37, '9353');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9353" name="1" style="color:red" class="red"><span class="b-ref">1</span>based on<span> EABA </span>relay selection<span> presents </span>the best performance on the success probability.</a> The reason is that random relay selection strategy randomly selects a link, SINR of which may not meet the requirements for D2D links and subsequently lead to communication failure. And rate based relay selection strategy selects a link has maximum end-to- end data rate, but the RUEs buffer states and residual energies 1 105 0.9 Success probability of communications 0.8 0.7 0.6 0.5 Random relay selection(SINR requirements is 70dB) 104 0.4 Rate based relay selection(SINR requirements is 70dB) EABA relay selection(SINR requirements is 70dB) 0.3 Random relay selection(SINR requirements is 20dB) Rate based relay selection(SINR requirements is 20dB) Total data transfer time (us) 0.2 EABA relay selection(SINR requirements is 20dB) Random selection; bandwidth = 720kHz Rate based selection; bandwidth = 720kHz 0.1 EABA selection; bandwidth = 720kHz Random selection; bandwidth = 540kHz Rate based selection; bandwidth = 540kHz 0 EABA selection; bandwidth = 540kHz 20 60 100 140 180 220 <a href="javascript:openDSC(538617862, 37, '9284');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9284" name="1" style="color:red" class="red"><span class="b-ref">1</span>Distance between source and destination DUEs (m)</a> 103 1 2 3 4 5 6 7 8 Buffer size of RUEs (number of packets) Fig. 3. Success probability for D2D communications <a href="javascript:openDSC(538617862, 37, '9387');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9387" name="1" style="color:red" class="red"><span class="b-ref">1</span>with varying distances between source and destination DUEs under different relay selection<span> strate- gies, </span>where the number of CUEs and RUEs are 20 and 10, respectively. The</a><a href="javascript:openDSC(538617862, 37, '9384');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9384" name="1" style="color:red" class="red"><span class="b-ref">1</span>Fig. 5. Total data amount transmitted within</a> varying buffer size, and different <a href="javascript:openDSC(538617862, 37, '9395');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9395" name="1" style="color:red" class="red"><span class="b-ref">1</span>buffer size at each UE is<span> 5, </span>the bandwidth<span> of </span>each channel is 720 kHz.</a><a href="javascript:openDSC(538617862, 37, '9462');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9462" name="1" style="color:red" class="red"><span class="b-ref">1</span>relay selection strategies and channel bandwidths,</a><a href="javascript:openDSC(538617862, 37, '9465');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9465" name="1" style="color:red" class="red"><span class="b-ref">1</span>where the distance between source and destination DUEs is<span> 180m, where </span>the number of<span> CUEs and </span>RUEs<span> are 20 and </span>10,</a> respectively. 7 ×1011 ×104 Total transfer time of Random relay selection 5 Total transfer time of Rate based relay selection Total transfer time of EABA relay selection Total tranfer data of Random relay selection a decreased data transmission in both of the links. Thus, 6 Total tranfer data of Rate based relay selection Total tranfer data of EABA relay selection the total data transmission time <a href="javascript:openDSC(538617862, 37, '9455');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9455" name="1" style="color:red" class="red"><span class="b-ref">1</span>will increase. In the three<span> 4 </span>strategies, the<span> EAPA </span>strategy has the</a> minimum total transfer within RUE residual energy (bits) 5 <a href="javascript:openDSC(538617862, 37, '9377');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9377" name="1" style="color:red" class="red"><span class="b-ref">1</span>Total data that can be transmitted</a> time, because it has a higher data rate and communications success probability. The random relay selection strategy shows 3 4 the worst performance, due to its lowest link data rate and communications success probability. Although rate based relay 3 selection strategy select the fastest link, but the lower commu- 2 Total data transfer time (us) nication success probability than EABA strategy leading to an 2 higher transmission time than EABA strategy. 1 Fig. 4 shows that the <a href="javascript:openDSC(538617862, 37, '9402');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9402" name="1" style="color:red" class="red"><span class="b-ref">1</span>total amount of data transmitted within<span> 1 </span>RUE</a> residual energy <a href="javascript:openDSC(538617862, 37, '9404');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9404" name="1" style="color:red" class="red"><span class="b-ref">1</span>with varying distances between DUEs S and D using three relay selection strategies. The performance<span> 0 </span>on total data amount under three strategies degrades with an</a> 20 60 100 140 180 220 0 <a href="javascript:openDSC(538617862, 37, '9289');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9289" name="1" style="color:red" class="red"><span class="b-ref">1</span>Distance between source and destination DUEs (m)</a><a href="javascript:openDSC(538617862, 37, '9407');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9407" name="1" style="color:red" class="red"><span class="b-ref">1</span>increasing separation distance. Increasing separation distance will<span> increase </span>path loss, resulting in a decreasing<span> link </span>data rate.</a> Fig. 4. <a href="javascript:openDSC(538617862, 37, '9385');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9385" name="1" style="color:red" class="red"><span class="b-ref">1</span>Total data amount transmitted within RUE<span> residual energy </span>and</a> total transmission time <a href="javascript:openDSC(538617862, 37, '9307');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9307" name="1" style="color:red" class="red"><span class="b-ref">1</span>with varying distances between source and destination In</a> addition, with the same system parameters, the random <a href="javascript:openDSC(538617862, 37, '9390');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9390" name="1" style="color:red" class="red"><span class="b-ref">1</span>DUEs under different relay selection strategies, where the number of CUEs</a><a href="javascript:openDSC(538617862, 37, '9413');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9413" name="1" style="color:red" class="red"><span class="b-ref">1</span>strategy offers a much worse performance on total data amount</a> and RUEs are 20 and 10, respectively. The <a href="javascript:openDSC(538617862, 37, '9398');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9398" name="1" style="color:red" class="red"><span class="b-ref">1</span>buffer size at each UE is<span> 5, </span>the</a> than the other two selection strategies, because the selected bandwidth of each channel is 720 kHz. link data rate and residual energy <a href="javascript:openDSC(538617862, 37, '9414');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9414" name="1" style="color:red" class="red"><span class="b-ref">1</span>of RUE<span> is </span>not considered in the relay selection. Although<span> rate based strategy </span>gives the highest<span> link </span>data rate, it can only work for a very short period</a> are not considered. So the strategy to select a link from S of time, due to the fact that residual energy of RUE is not to RUE with maximum <a href="javascript:openDSC(538617862, 37, '9111');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9111" name="1" style="color:red" class="red"><span class="b-ref">1</span>end-to-end data rate,<span> but the </span>RUE<span> considered </span>in<span> the </span>relay</a> selection, leading to a smaller amount does not have enough buffer space or residual energy which of data transmitted than EABA strategy. The EABA strategy may lead to communication failure. Furthermore, no matter <a href="javascript:openDSC(538617862, 37, '9418');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9418" name="1" style="color:red" class="red"><span class="b-ref">1</span>gives the best performance on total data amount,</a> because it <a href="javascript:openDSC(538617862, 37, '9356');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9356" name="1" style="color:red" class="red"><span class="b-ref">1</span>which strategy is used, a lower link SINR requirement results</a> not only ensure the system work more time, but also ensure in <a href="javascript:openDSC(538617862, 37, '9357');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9357" name="1" style="color:red" class="red"><span class="b-ref">1</span>higher success probability of D2D communications. the</a> link data rate. Fig. 4 shows that the total data transmission time of the three Fig. 5 illustrates <a href="javascript:openDSC(538617862, 37, '9500');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9500" name="1" style="color:red" class="red"><span class="b-ref">1</span>the influences of<span> RUE’s </span>buffer size on the</a> relay selection <a href="javascript:openDSC(538617862, 37, '9449');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9449" name="1" style="color:red" class="red"><span class="b-ref">1</span>strategies become worse off as the distance</a> total data transmission time with the three relay selection s- <a href="javascript:openDSC(538617862, 37, '9450');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9450" name="1" style="color:red" class="red"><span class="b-ref">1</span>between S and D is enlarged. The reason is that enlarging</a> trategies <a href="javascript:openDSC(538617862, 37, '9464');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9464" name="1" style="color:red" class="red"><span class="b-ref">1</span>and different channel bandwidths. Given a bandwidth</a><a href="javascript:openDSC(538617862, 37, '9451');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9451" name="1" style="color:red" class="red"><span class="b-ref">1</span>separation distance may reduce data rate on both source-<span> and a </span>relay</a> selection strategy, if buffer size is less than 5, <a href="javascript:openDSC(538617862, 37, '9453');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9453" name="1" style="color:red" class="red"><span class="b-ref">1</span>to-relay and relay-to-destination links. Reducing data rate</a> increasing the buffer size of RUEs leads to a decrease in the <a href="javascript:openDSC(538617862, 37, '9454');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9454" name="1" style="color:red" class="red"><span class="b-ref">1</span>means that servicing rate is decreased, directly leading to</a> total data transmission time. As the buffer size increases, the probability of successful communications increases, and this leads to lower total data transmission time. Otherwise, the total time isn’t influenced by buffer size when it is greater than 5. The reason is that the communication failure caused due to RUEs lack of buffer size which does not happen when RUEs has enough buffer size. No matter which strategy is used, <a href="javascript:openDSC(538617862, 37, '9487');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9487" name="1" style="color:red" class="red"><span class="b-ref">1</span>reducing channel bandwidth will dramatically increase the</a> total data transmission time. <a href="javascript:openDSC(538617862, 37, '9488');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9488" name="1" style="color:red" class="red"><span class="b-ref">1</span>Because a smaller bandwidth<span> leads </span>to a lower data rate on each link.<span> In addition, with </span>the</a> same buffer size and channel bandwidth, the total data transmission time of EABA <a href="javascript:openDSC(538617862, 37, '9493');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9493" name="1" style="color:red" class="red"><span class="b-ref">1</span>strategy is better than that of the<span> random </span>and<span> rate </span>based<span> strategies, </span>and the advantage becomes more evident if the bandwidth is relatively small.</a> V. <a href="javascript:openDSC(538617862, 37, '9503');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9503" name="1" style="color:red" class="red"><span class="b-ref">1</span>CONCLUSION In this paper, we designed an efficient relay selection scheme for Relay-Assisted D2D communication in</a> cellular network. <a href="javascript:openDSC(538617862, 37, '9504');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9504" name="1" style="color:red" class="red"><span class="b-ref">1</span>Under the assumption that D2D<span> communication </span>reuse the uplink channels of CUEs, we proposed a</a> Energy- Aware and Buffer-Aided (EABA) <a href="javascript:openDSC(538617862, 37, '9506');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9506" name="1" style="color:red" class="red"><span class="b-ref">1</span>relay selection scheme, which jointly considered end-to-end data rate,</a> RUEs residual energies, and RUEs buffer states. The <a href="javascript:openDSC(538617862, 37, '9514');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9514" name="1" style="color:red" class="red"><span class="b-ref">1</span>estimation processes of the end-to-end data rate,</a> RUEs residual energies, and RUEs buffer states <a href="javascript:openDSC(538617862, 37, '9520');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9520" name="1" style="color:red" class="red"><span class="b-ref">1</span>were described. Specially, we established a</a> relay selection scheme which select the best link instead of selecting best relay. Simulation results showed <a href="javascript:openDSC(50349548, 37, '21322');" onmouseover="doRollover(34);" onmouseout="undoRollover(34);" id="21322" name="34" style="color:#9966ff" class="#9966ff"><span class="b-ref">34</span>that the proposed scheme provides the best<span> overall transmission </span>performance</a><a href="javascript:openDSC(538617862, 37, '9521');" onmouseover="doRollover(1);" onmouseout="undoRollover(1);" id="9521" name="1" style="color:red" class="red"><span class="b-ref">1</span>compared to other relay selection schemes,.</a><a href="javascript:openDSC(59025512, 37, '22562');" onmouseover="doRollover(19);" onmouseout="undoRollover(19);" id="22562" name="19" style="color:#cc0066" class="#cc0066"><span class="b-ref">19</span>ACKNOWLEDGMENT This work was supported by the National Key Technolo- gy R&amp;D Program</a> (No.2015BAI01B14) <a href="javascript:openDSC(2038898078, 2909, '8937');" onmouseover="doRollover(29);" onmouseout="undoRollover(29);" id="8937" name="29" style="color:#31ff00" class="#31ff00"><span class="b-ref">29</span>and the Fundamental Research Funds for the Central Universities.</a><a href="javascript:openDSC(3903799129, 2474, '2811');" onmouseover="doRollover(6);" onmouseout="undoRollover(6);" id="2811" name="6" style="color:#630000" class="#630000"><span class="b-ref">6</span>REFERENCES [1] K. Doppler, M. Rinne, C. Wijting, C. B. Ribeiro, and K. Hugl, “Device-to-device communication as an<span> under- lay </span>to LTE-advanced networks,” IEEE<span> Communications Magazine, </span>vol. 47, no. 12, pp. 42–49, Dec 2009. [2] L.</a> Ferdouse, W. Ejaz, K. Raahemifar, A. Anpalagan, and M. Markandaier, <a href="javascript:openDSC(74908729, 2, '16440');" onmouseover="doRollover(18);" onmouseout="undoRollover(18);" id="16440" name="18" style="color:#cc6600" class="#cc6600"><span class="b-ref">18</span>“Interference and throughput aware resource allocation for multi-class D2D in 5G networks,” IET Communications,</a> vol. 11, no. 8, pp. 1241–1250, 2017. [3] <a href="javascript:openDSC(1914893523, 2909, '986');" onmouseover="doRollover(7);" onmouseout="undoRollover(7);" id="986" name="7" style="color:#009cff" class="#009cff"><span class="b-ref">7</span>J. Gu, S. J. Bae, S. F. Hasan, and M. Y. Chung, “Heuristic Algorithm for Proportional Fair Scheduling in D2D-Cellular Systems,” IEEE Transactions on Wireless Communications, vol. 15, no. 1, pp. 769–780, Jan 2016.</a><a href="javascript:openDSC(1984694028, 2909, '1049');" onmouseover="doRollover(5);" onmouseout="undoRollover(5);" id="1049" name="5" style="color:#ff6600" class="#ff6600"><span class="b-ref">5</span>[4] P. Mach, Z. Becvar, and T. Vanek, “In-band device-to- device<span> communication </span>in ofdma cellular networks: A survey and challenges,” IEEE Communications Surveys Tutorials, vol. 17, no. 4, pp. 1885–1922, Fourthquarter 2015. [5] M.<span> Oiwa </span>and</a><a href="javascript:openDSC(501302298, 37, '25381');" onmouseover="doRollover(11);" onmouseout="undoRollover(11);" id="25381" name="11" style="color:#ff0063" class="#ff0063"><span class="b-ref">11</span>S. Sugiura, “On the Simultaneous<span> Exploita- tion </span>of Multiple Source-to-Relay Channels in Buffer- Aided Two-Hop Cooperative Networks,” in<span> 2016 </span>IEEE 83rd<span> Vehicular Technology Conference </span>(VTC Spring), May 2016, pp. 1–5.</a> [6] <a href="javascript:openDSC(542567399, 37, '25775');" onmouseover="doRollover(12);" onmouseout="undoRollover(12);" id="25775" name="12" style="color:#006331" class="#006331"><span class="b-ref">12</span>Z. Chen, N. Pappas, and M. Kountouris, “Probabilistic Caching in Wireless D2D Networks: Cache Hit Optimal Versus Throughput Optimal,” IEEE<span> Communications Let- ters, </span>vol. 21, no. 3, pp. 584–587,</a> March 2017. [7] J. Y. Pan and M. H. Hsu, <a href="javascript:openDSC(788472798, 1, '14721');" onmouseover="doRollover(14);" onmouseout="undoRollover(14);" id="14721" name="14" style="color:#9c6331" class="#9c6331"><span class="b-ref">14</span>“Relay selection of relay- assisted Device-to-Device and uplink communication<span> un- derlying </span>cellular networks,”<span> in </span>2017 International<span> Con- ference </span>on Computing, Networking and Communications (ICNC),</a> Jan 2017, pp. 980–985. [8] R. Zeng and C. Tepedelenlioglu, “Multiple <a href="javascript:openDSC(59030791, 37, '21132');" onmouseover="doRollover(17);" onmouseout="undoRollover(17);" id="21132" name="17" style="color:#63009c" class="#63009c"><span class="b-ref">17</span>Device-to- Device<span> Users Overlaying </span>Cellular Networks,” in<span> 2017 </span>IEEE Wireless Communications and Networking Confer- ence (WCNC),<span> March 2017, </span>pp.</a> 1–6. [9] <a href="javascript:openDSC(527160685, 37, '21008');" onmouseover="doRollover(4);" onmouseout="undoRollover(4);" id="21008" name="4" style="color:brown" class="brown"><span class="b-ref">4</span>M. Hasan, E. Hossain, and D. I. Kim, “Resource Al- location Under Channel Uncertainties for Relay-Aided Device-to-Device Communication Underlaying LTE-A Cellular Networks,” IEEE Transactions on Wireless Com- munications, vol. 13, no. 4, pp. 2322–2338, April 2014.</a> [10] <a href="javascript:openDSC(542447521, 37, '21220');" onmouseover="doRollover(8);" onmouseout="undoRollover(8);" id="21220" name="8" style="color:#31ff00" class="#31ff00"><span class="b-ref">8</span>N. Wei, X. Lin, and Z. Zhang, “Optimal Relay Probing in Millimeter-Wave Cellular Systems With Device-to- Device Relaying,” IEEE<span> Transactions </span>on Vehicular<span> Tech- nology, </span>vol. 65, no. 12, pp. 10 218–10 222,</a> Dec 2016. [11] A. <a href="javascript:openDSC(528440440, 37, '27360');" onmouseover="doRollover(25);" onmouseout="undoRollover(25);" id="27360" name="25" style="color:brown" class="brown"><span class="b-ref">25</span>Alabbasi and<span> B. </span>Shihada, “Optimal Cross-Layer<span> De- sign </span>for Energy Efficient D2D Sharing Systems,”</a><a href="javascript:openDSC(942291325, 2909, '6833');" onmouseover="doRollover(21);" onmouseout="undoRollover(21);" id="6833" name="21" style="color:#336699" class="#336699"><span class="b-ref">21</span>IEEE Transactions on Wireless Communications, vol. 16, no. 2, pp.<span> 839–855, </span>Feb 2017.</a> [12] <a href="javascript:openDSC(1456151051, 2909, '849');" onmouseover="doRollover(10);" onmouseout="undoRollover(10);" id="849" name="10" style="color:#00cc99" class="#00cc99"><span class="b-ref">10</span>N. Zlatanov, A. Ikhlef, T. Islam, and R. Schober, “Buffer- aided cooperative communications: opportunities and challenges,” IEEE Communications Magazine, vol. 52, no. 4, pp. 146–153, April 2014.</a> [13] <a href="javascript:openDSC(504987896, 37, '25285');" onmouseover="doRollover(3);" onmouseout="undoRollover(3);" id="25285" name="3" style="color:blue" class="blue"><span class="b-ref">3</span>D. Feng, L. Lu, Y. Yuan-Wu, G. Y. Li, G. Feng, and S. Li, “Device-to-Device Communications Underlaying<span> Cellu- lar </span>Networks,” IEEE Transactions on Communications, vol. 61, no. 8, pp. 3541–3551, August 2013.<span> [14] F. Wang, </span>C.<span> Xu, L. Song, </span>and<span> Z. Han, “Energy- </span>Efficient Resource Allocation for Device-to-Device<span> Un- derlay </span>Communication,” IEEE<span> Transactions </span>on Wireless</a><a href="javascript:openDSC(69790787, 2, '10703');" onmouseover="doRollover(28);" onmouseout="undoRollover(28);" id="10703" name="28" style="color:#009cff" class="#009cff"><span class="b-ref">28</span>Communications, vol. 14, no. 4, pp. 2082–2092, April 2015.</a> [15] <a href="javascript:openDSC(2918085502, 304, '1436');" onmouseover="doRollover(9);" onmouseout="undoRollover(9);" id="1436" name="9" style="color:#330099" class="#330099"><span class="b-ref">9</span>Y. Chen and Q. Zhao, “An Integrated Approach to Energy-Aware Medium Access for Wireless Sensor<span> Net- works,” </span>IEEE Transactions on Signal Processing, vol. 55, no. 7, pp. 3429–3444, July 2007.</a>
+</div>
+</div>
+</body>
+</html>
