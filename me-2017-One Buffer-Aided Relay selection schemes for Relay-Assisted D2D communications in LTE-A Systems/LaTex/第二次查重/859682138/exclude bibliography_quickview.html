@@ -1,0 +1,908 @@
+
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Turnitin, LLC" />
+    <meta name="keywords" content="" /> 
+    <meta name="description" content="" />
+<title>Turnitin</title>
+
+<base href="http://turnitin.com">
+<style type="text/css">
+body	{
+	color: #333;
+	background: #C0C7CC;
+	padding: 0;
+	border: 0;
+	font: 13px Verdana, arial, sans-serif;
+	margin: 0;
+	}
+	
+form	{
+	padding: 0;
+	margin: 0;
+	}
+	
+body#display	{
+	}
+	
+body#bodysource	{
+	width: 520px;
+	background: #F0F4FA;
+	}
+	
+p	{
+	padding: 10px 18px;
+	margin: 0;
+	}
+	
+img	{
+	border: 0;
+	padding: 0;
+	}
+
+div	{
+	padding: 0;
+	border: 0;
+	}
+	
+iframe	{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	}
+	
+strong	{
+	font-weight: bold;
+	}
+	
+ul	{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 13px;
+	}
+	
+ul li	{
+	padding: 0;
+	margin: 0;
+	line-height: 16px;
+	}
+	
+#index span#exclude	{
+	margin: 0 50px 0 23px;
+	}
+	
+#index a	{
+	font-size: 11px;
+	padding: 0 8px;
+	}
+	
+#index select	{
+	font-size: 12px;
+	border: 1px solid #888;
+	}
+	
+#index input.small	{
+	margin: 0 0 0 5px;
+	width: 30px;
+	color: red;
+	font-weight: bold;
+	font-size: 13px;
+	border: 1px solid #888;
+	vertical-align: baseline;
+	}
+		
+div.links	{
+	width: 85%;
+	margin: 0 auto;
+	border-left: 1px solid #888;
+	border-right: 1px solid #888;
+	padding-top: 8px;
+	background: #E8EEF7;
+	text-align: left;
+	}
+	
+.links div	{
+	padding: 5px 13px 10px 20px;
+	border-bottom: 1px dotted #888;
+	}
+	
+.links div p	{
+	padding: 2px 0 0 40px;
+	}
+	
+div#body	{
+	line-height: 17px;
+	width: 85%;
+	margin: auto;
+	padding: 20px 0;
+	background: #fff;
+	border-bottom: 1px solid #888;
+	border-right: 1px solid #888;
+	border-left: 1px solid #888;
+	text-align: left;
+	}
+	
+#body p	{
+	color: #000;
+	padding-top: 10 0;
+	margin: 0 40px;
+	}
+#actions {
+	display: none;
+	}
+
+a.exclude	{
+	float: right;
+	margin: 0;
+	padding: 0;
+	}
+/*= GENERAL 
+=== === === === === === === === === === === === === === === === === === === === === === === === === === === === === === */	
+
+body  #top_bar {
+display: none !important;
+}
+
+body #index #exclude,
+#download_button,
+#print_button,
+#index .right
+ {
+display: none;
+}
+
+body #index {
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+border: 1px solid #999;
+background: #ececec url(new_dynamic/images/22bd7a01a025b8de122259e42762f0a7cb_ug_toolbar_bg.gif) repeat-x center left;
+}
+
+#toolbar_wrapper {
+padding-left:45px;
+}
+
+body #top {
+width: 85%;
+background-color: #FFF;
+margin-left: auto;
+margin-right: auto;
+border: 1px solid #999;
+border-bottom: none;
+height: 210px;
+}
+body #content {
+padding: 10px 60px;
+}
+body div#prefs {
+display: none;
+}
+
+body #top h2 {
+font-size: 20px;
+font-weight: normal;
+}
+
+body #top h2 strong {
+font-weight: normal;
+}
+body #top h2 em {
+font-style: normal;
+}
+
+
+body #top h3 {
+font-size: 16px;
+font-weight: normal;
+}
+
+body #top h3 strong {
+font-weight: normal;
+}
+body #top h3 em {
+font-style: normal;
+}
+
+        
+        body #top_body li	{/*Paper info li*/
+            padding:0;
+            margin: 0px 0px 2px 0px;
+            font-size: 10px;
+            }
+            
+            #top_body #print_wrapper {
+                float:left;
+                width: 50%;
+            }
+            
+            #top_body .similarity_print_wrapper {
+                width: 45%;
+                min-width: 283px;
+            }
+                
+            #top_body .similarity_box { /*Similiarity Box w/ Similarity by Source */
+                float: right;
+                border: solid 1px #666;
+                margin-top: 60px;
+                width: 350px;
+            }
+                #top_body .similarity_box .overall_similarity {
+                    float: left;
+                    border-right: solid 1px #666;
+                }
+                    #top_body .similarity_box .overall_similarity .color_box {
+                        font-size: 14px;
+                        width: 140px;
+                    }
+                        #top_body .color_box.green {
+                            background-color: green;
+                        }
+                        #top_body .color_box.blue {
+                            background-color: blue;
+                        }
+                        #top_body .color_box.yellow {
+                            background-color: yellow;
+                        }
+                        #top_body .color_box.orange {
+                            background-color: orange;
+                        }
+                        #top_body .color_box.red {
+                            background-color: red;
+                        }
+
+                    #top_body .similarity_box .overall_similarity .similarity_title {
+                        font-size: 13px;
+                        font-weight: normal;
+                        padding: 5px 0px 0px;
+                        text-align: center;
+                    }
+
+                    #top_body .similarity_box .overall_similarity .similarity_percent {
+                        font-size: 25px;
+                        font-family: georgia, times, serif;
+                        padding: 5px 0px 15px;
+                        text-align: center;
+                    }
+
+                    #top_body .similarity_box .overall_similarity a {
+                         display: none;
+                    }
+
+                #top_body .similarity_box .similarity_by_source {
+                     float: right;
+                     font-size: 10px;
+                }
+                    #top_body .similarity_box .similarity_by_source .similarity_title {
+                         padding: 6px 0px 0px 10px;
+                         font-weight: bold;
+                         text-align: left;
+                    }
+                    #top_body .similarity_box .similarity_by_source dl {
+                        padding-left: 10px;
+                        margin: 14px 7px 0px 0px;
+                    }
+                    #top_body .similarity_box .similarity_by_source dt {
+                         float: left;
+                         width: 160px;
+                    }
+                    #top_body .similarity_box .similarity_by_source dd {
+                        float: left;
+                        margin: 0px;
+                    }
+
+	
+		
+#index span#exclude	{
+	margin: 0 50px 0 23px;
+	}
+	
+#index a	{
+	font-size: 11px;
+	padding: 0 8px;
+	}
+	
+#index select	{
+	font-size: 12px;
+	border: 1px solid #888;
+	}
+	
+#index input.small	{
+	margin: 0 0 0 5px;
+	width: 30px;
+	color: red;
+	font-weight: bold;
+	font-size: 13px;
+	border: 1px solid #888;
+	vertical-align: baseline;
+	}
+		
+div.links	{
+	width: 85%;
+	margin: 0 auto;
+	border-left: 1px solid #888;
+	border-right: 1px solid #888;
+	padding-top: 8px;
+	background: #E8EEF7;
+	text-align: left;
+	}
+	
+.links div	{
+	padding: 5px 13px 10px 20px;
+	border-bottom: 1px dotted #888;
+	}
+	
+.links div p	{
+	padding: 2px 0 0 40px;
+	}
+	
+div#body	{
+	line-height: 17px;
+	width: 85%;
+	margin: auto;
+	padding: 20px 0;
+	background: #fff;
+	border-bottom: 1px solid #888;
+	border-right: 1px solid #888;
+	border-left: 1px solid #888;
+	text-align: left;
+	}
+	
+#body p	{
+	color: #000;
+	padding-top: 10 0;
+	margin: 0 40px;
+	}
+#actions {
+	display: none;
+	}
+
+a.exclude	{
+	float: right;
+	margin: 0;
+	padding: 0;
+	}
+	
+#small_matches_prefs {
+    display:none;
+}
+/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+*/
+.yui-button{display:-moz-inline-box;display:inline-block;vertical-align:text-bottom;}.yui-button .first-child{display:block;*display:inline-block;}.yui-button button,.yui-button a{display:block;*display:inline-block;border:none;margin:0;}.yui-button button{background-color:transparent;*overflow:visible;cursor:pointer;}.yui-button a{text-decoration:none;}.yui-skin-sam .yui-button{border-width:1px 0;border-style:solid;border-color:#808080;background:url(../images/yui270/build/assets/skins/sam/96b257a32a932f7739d7dab52b38ee8fcb_sprite.png) repeat-x 0 0;margin:auto .25em;}.yui-skin-sam .yui-button .first-child{border-width:0 1px;border-style:solid;border-color:#808080;margin:0 -1px;_margin:0;}.yui-skin-sam .yui-button button,.yui-skin-sam .yui-button a{padding:0 10px;font-size:93%;line-height:2;*line-height:1.7;min-height:2em;*min-height:auto;color:#000;}.yui-skin-sam .yui-button a{*line-height:1.875;*padding-bottom:1px;}.yui-skin-sam .yui-split-button button,.yui-skin-sam .yui-menu-button button{padding-right:20px;background-position:right center;background-repeat:no-repeat;}.yui-skin-sam .yui-menu-button button{background-image:url(yui270/build/button/assets/skins/sam/6305efb37fa05af65c79b58b9d4c1b03cb_menu-button-arrow.png);}.yui-skin-sam .yui-split-button button{background-image:url(yui270/build/button/assets/skins/sam/ced974d5c685e5dfa0a37b824a6b5d48cb_split-button-arrow.png);}.yui-skin-sam .yui-button-focus{border-color:#7D98B8;background-position:0 -1300px;}.yui-skin-sam .yui-button-focus .first-child{border-color:#7D98B8;}.yui-skin-sam .yui-button-focus button,.yui-skin-sam .yui-button-focus a{color:#000;}.yui-skin-sam .yui-split-button-focus button{background-image:url(yui270/build/button/assets/skins/sam/36e66540d2feba76b8991e18b76fe93bcb_split-button-arrow-focus.png);}.yui-skin-sam .yui-button-hover{border-color:#7D98B8;background-position:0 -1300px;}.yui-skin-sam .yui-button-hover .first-child{border-color:#7D98B8;}.yui-skin-sam .yui-button-hover button,.yui-skin-sam .yui-button-hover a{color:#000;}.yui-skin-sam .yui-split-button-hover button{background-image:url(yui270/build/button/assets/skins/sam/36e66540d2feba76b8991e18b76fe93bcb_split-button-arrow-hover.png);}.yui-skin-sam .yui-button-active{border-color:#7D98B8;background-position:0 -1700px;}.yui-skin-sam .yui-button-active .first-child{border-color:#7D98B8;}.yui-skin-sam .yui-button-active button,.yui-skin-sam .yui-button-active a{color:#000;}.yui-skin-sam .yui-split-button-activeoption{border-color:#808080;background-position:0 0;}.yui-skin-sam .yui-split-button-activeoption .first-child{border-color:#808080;}.yui-skin-sam .yui-split-button-activeoption button{background-image:url(yui270/build/button/assets/skins/sam/890272b241c1d8a0db3ce5680b71fab0cb_split-button-arrow-active.png);}.yui-skin-sam .yui-radio-button-checked,.yui-skin-sam .yui-checkbox-button-checked{border-color:#304369;background-position:0 -1400px;}.yui-skin-sam .yui-radio-button-checked .first-child,.yui-skin-sam .yui-checkbox-button-checked .first-child{border-color:#304369;}.yui-skin-sam .yui-radio-button-checked button,.yui-skin-sam .yui-checkbox-button-checked button{color:#fff;}.yui-skin-sam .yui-button-disabled{border-color:#ccc;background-position:0 -1500px;}.yui-skin-sam .yui-button-disabled .first-child{border-color:#ccc;}.yui-skin-sam .yui-button-disabled button,.yui-skin-sam .yui-button-disabled a{color:#A6A6A6;cursor:default;}.yui-skin-sam .yui-menu-button-disabled button{background-image:url(yui270/build/button/assets/skins/sam/4df7235ca027f2546b2a216e59f81fb0cb_menu-button-arrow-disabled.png);}.yui-skin-sam .yui-split-button-disabled button{background-image:url(yui270/build/button/assets/skins/sam/db73dce6da2f5c5f02399c93488ce69ecb_split-button-arrow-disabled.png);}
+
+</style>
+
+</head>
+
+<body onload="">
+
+<link rel="stylesheet" type="text/css" href="/r/build/css/tii/88ee4ccd3555f2b759921fb5d58d83e5cb_container.css" media="all" />
+
+
+
+
+<script type="text/javascript" src="/r/build/js/tii/8b608684a5f4aec1b540987c93498c01cb_tii_anonymous_marking.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+function initAnonymousMarking () {
+    // initialize panel.  
+    var config = {
+            zindex: 4,
+            underlay: 'none',
+            modal: true,
+            visible: false,
+            draggable: false,
+            close: false,
+            fixedcenter: true
+    };
+    if ($('disable_anonymous_marking')) {
+        disableAnonymousMarkingPanel = new IP.widget.Panel($('disable_anonymous_marking'), config);
+        if($D.hasClass('disable_anonymous_marking', 'app')) {
+            disableAnonymousMarkingPanel.center = function () {
+                var nViewportOffset = 20,
+                    elementWidth = this.element.offsetWidth,
+                    elementHeight = this.element.offsetHeight,
+                    viewPortWidth = $D.getViewportWidth(),
+                    viewPortHeight = $D.getViewportHeight(),
+                    x,
+                    y;
+
+                if (elementWidth < viewPortWidth) {
+                    x = (viewPortWidth / 2) - (elementWidth / 2) + $D.getDocumentScrollLeft();
+                } else {
+                    x = nViewportOffset + $D.getDocumentScrollLeft();
+                }
+
+				if (browser == 'Internet Explorer') {
+					x = 0;
+				}
+                y = 2 + $D.getDocumentScrollTop();
+
+                this.cfg.setProperty("xy", [parseInt(x, 10), parseInt(y, 10)]);
+                this.cfg.refireEvent("iframe");
+            };
+        }
+        disableAnonymousMarkingPanel.render(document.body);
+        disableAnonymousMarkingPanel.hideEvent.subscribe(function () { $('anonymous_error').innerHTML = ''; }, false);
+        disableAnonymousMarkingPanel.hide();
+        Element.show($('disable_anonymous_marking'));
+    }
+}
+
+function disableAM (data) {
+    $('anonymous_title').innerHTML = data.title;
+    document.disable_anonymous_marking_form.objectid.value = data.oid;
+    disableAnonymousMarkingPanel.show();
+}
+
+function checkDisableAM () {
+    var form = document.disable_anonymous_marking_form;
+    if (form.reason.value.length <= 5) {
+        $('anonymous_error').innerHTML = "请提供关闭匿名批注的原因。";
+    }
+    else {
+        form.submit();
+    }
+    return;
+}
+
+YAHOO.util.Event.onDOMReady(initAnonymousMarking);
+
+</script>
+
+<div id="disable_anonymous_marking" class="app" style="display: none;">
+<div class="anonymous_frames">
+<form method="post" name="disable_anonymous_marking_form">
+    <input type="hidden" name="objectid" value=""/>
+    <input type="hidden" name="disable_anonymous_marking" value="1"/> 
+    <div class="anonymous_header">
+    	<h1>关闭匿名标记</h1>
+		<p>请说明关闭匿名标记的原因： <span id="anonymous_title"></span><br />
+			<strong>警告: 管理员可以存取此资讯。此设定是永久性的。</strong>
+        
+            </p>
+        
+    </div>
+    <div class="anonymous_body">
+        <textarea name="reason" cols="30" rows="3"></textarea>
+        <p id="anonymous_error"></p>
+    </div>
+    <div class="anonymous_footer">
+		<div class="anonymous_footer_buttons">
+    		<span class="submit_form_button"><input type="button" onClick="checkDisableAM();" value="提交"></span><br>
+        	<span class="submit_form_button"><input type="button" value="取消" onClick="disableAnonymousMarkingPanel.hide();"></span>
+		</div>
+    </div>
+</form>
+</div>
+</div>
+<div id="actions">
+<p>这是您报告的印表版的检视。请点击 "打印" 以继续或 "结束" 以关闭视窗。</p>
+<script type="text/javascript" language="javascript">
+	var browserName=navigator.appName;
+	var browserVer=parseInt(navigator.appVersion);
+	if ((navigator.appVersion.indexOf("Mac")!=-1) && (browserName == "Microsoft Internet Explorer")) {
+		document.write('<span class="AR10">键入 COMMAND-P 开始打印。</span><br><br>');
+	} else {
+		document.write('<a href="javascript:window.print();">打印</a>&nbsp;&nbsp;');
+	}
+</script>
+<a href="javascript:window.close();">完成</a>
+</div>
+
+
+<!-- ########################### Preferences pop-up ##########################--> 
+<div id="prefs" style="visibility:hidden">
+<div class="padding">
+<form name="prefs_form" method="post" accept-charset="utf-8">
+<script type="text/javascript" language="javascript">
+function savePrefs(){
+	if (document.prefs_form.changed.value == 1){
+		document.prefs_form.submit();
+	}else{
+        hidePrefsPane();
+	}
+}
+
+function showPrefsPane(){
+	document.getElementById('prefs').style.visibility='visible';
+}
+
+function hidePrefsPane(){
+    document.getElementById('prefs').style.visibility='hidden';
+}
+
+
+var overlay;
+function showSmallMatchExclusions() {
+    var linkRegion = $D.getRegion('exclude_small_matches_link');
+    var panelRegion = $D.getRegion('small_matches_prefs');
+    var indexRegion = $D.getRegion('index');
+    
+    var topLocation = indexRegion.bottom;
+    $D.setStyle('small_matches_prefs', 'top', topLocation + 'px');
+    $D.setStyle('small_matches_prefs', 'left', linkRegion.left + 'px');
+    
+    $D.setStyle('small_matches_prefs', 'visibility', 'visible');
+
+    // focus the field
+    $D.hasClass('exclude_by_percent_row', 'selected') ? $('exclude_by_percent_value').focus() : $('exclude_by_words_value').focus();
+}
+
+function hideSmallMatchExclusions() {
+    $D.setStyle('small_matches_prefs', 'visibility', 'hidden');
+}
+
+function selectSmallExclusionMethod(enableType) {
+    if(enableType == 'words') {
+        $('exclude_by_words_value').focus();
+        
+        $D.addClass('exclude_by_words_row', 'selected');
+        $D.removeClass('exclude_by_percent_row', 'selected');
+        $D.removeClass('exclude_by_words_row', 'disabled');
+        $D.addClass('exclude_by_percent_row', 'disabled');
+    }
+    else {
+        $('exclude_by_percent_value').focus();
+        
+        $D.removeClass('exclude_by_words_row', 'selected');
+        $D.addClass('exclude_by_percent_row', 'selected');
+        $D.addClass('exclude_by_words_row', 'disabled');
+        $D.removeClass('exclude_by_percent_row', 'disabled');
+    }
+}
+
+function updateExcludePercentage(wordCount) {
+    var percent = Math.floor(wordCount / 4404 * 100);
+    
+    $('exclude_by_percent_value').value = percent;
+}
+
+function updateExcludeWordCount(percent) {
+    var wordCount = Math.floor((percent/100) * 4404);
+    
+    $('exclude_by_words_value').value = wordCount;
+}
+
+function submitSmallMatchesChange() {
+    var excludeBy = $D.hasClass('exclude_by_percent_row', 'selected') ? 'percent' : 'words';
+    var excludeValue = excludeBy == 'percent' ? $('exclude_by_percent_value').value : $('exclude_by_words_value').value;
+    
+    changeSmallMatchExclusion(excludeBy, parseInt(excludeValue), 4404);
+}
+
+</script>
+</script>
+<input type="hidden" name="changed" value="0">
+        <div class="pref_rows">
+                <label>颜色代码匹配：</label>
+                <select name="use_colors" onchange="document.prefs_form.changed.value=1">
+                    <option value="1">是
+                    <option value="0">否 
+                </select>
+                <div class="clear"></div>
+        </div>
+        <div class="pref_rows">
+                <label>预设模式：</label>
+                <select name="def_report_mode" onchange="document.prefs_form.changed.value=1">
+                    <option value="0">显示所有匹配度最高的
+                    <option value="1">每次显示一个匹配的
+                    <option value="2">快速查看报告（经典页面）
+                </select>
+                <div class="clear"></div>
+        </div>
+        <div class="pref_rows">
+                <label>自动导航</label>
+                <select name="report_scrolling" onchange="document.prefs_form.changed.value=1">
+                    <option value="0">跳到下一个符合处
+                    <option value="1">移动到下一个谋和处
+                </select>
+                <div class="clear"></div>
+        </div>
+        
+        <div id="prefs_confirm">
+            <button onClick="savePrefs()" >储存</button>  
+         <a href="javascript:void(0);" onClick="hidePrefsPane();">取消</a>
+        </div>
+</form>
+</div>
+</div>
+<!-- ########################### END Preferences pop-up  ##########################--> 
+
+<!-- ########################### BEGIN small matches pop-up  ##########################--> 
+<div id="small_matches_prefs">
+    <form onsubmit="submitSmallMatchesChange(); return false;">
+        <ul>
+            <li id="exclude_by_words_row" class="selected">
+                <label for="exclude_by_words_value">字数: </label>
+                <input type="text" id="exclude_by_words_value" size="3" value="" onkeyup="updateExcludePercentage(this.value)" onfocus="selectSmallExclusionMethod('words')"> 字
+            </li>
+            <li id="exclude_by_percent_row" class="disabled">
+                <label for="exclude_by_percent_value">百分比: </label>
+                <input type="text" id="exclude_by_percent_value" size="3" value="" max-length="3" onkeyup="updateExcludeWordCount(this.value)" onfocus="selectSmallExclusionMethod('percent')"> %
+            </li>
+        </ul>
+        <p><input type='submit' value="提交"> 或 <a href="javascript:hideSmallMatchExclusions()">取消</a></p>
+    </form>
+</div>
+
+<!-- ########################### END small matches pop-up  ##########################-->
+
+<!-- ########################### Top of Report  ##########################--> 
+<div id="top">
+    <div id="content">
+    
+        <!-- ######### Top Bar  ##########################--> 
+        <div id="top_bar">
+                <ul id="top_bar_list1">
+                      <!-- Preferences --><li><a href="javascript:showPrefsPane();">preferences</a></li> 
+                </ul>
+                <ul id="top_bar_list2">
+                      
+                </ul>
+                <div class="clear"></div>
+        </div>   
+        <!-- ######### END Top Bar  ##########################--> 
+        
+        
+        <!-- ######### Top Body  ##########################--> 
+        <div id="top_body">
+         
+            <!-- Button to Turnitin2 -->
+            <span id="link_to_tii2_or" class="yui-button yui-link-button goto-tii2" style="left:0">
+                <span class="first-child">
+                    
+                    <a href='/newreport.asp?r=75.367957329048&svr=324&lang=zh_hans&oid=859682138&sv=2'>文件检视工具</a>
+                    
+                </span>
+            </span>
+
+            <div id="print_wrapper">
+                <div class="general_info">
+                    <!-- Logo --> 
+                    <h2>
+                        <span class=""></span>
+                        <strong>Turnitin</strong>
+                        <em>原创性报告</em>
+                     </h2>
+                 
+                     <!-- Paper Info -->               
+                     <ul>
+                         <li>已处理到: 09-10月-2017 06:00 CDT</li>
+                         <li>代码: 859682138 </li>
+                         <li>字数: 4404</li>
+                         <li>已提交: 1</li>
+                     </ul>
+                </div>
+
+                 <!-- Paper Title --> 
+                <h3>
+                    <strong>Joint Energy-Aware and Buffer-Assisted Relay Selection Method for Relay-Aided D2D Communications</strong> 
+                    
+                    <em>整合者 ChaPaper</em>
+                    
+                </h3>
+            </div>
+            
+            <div id="similarity_print_wrapper">
+                <div class="similarity_box">
+                    <div class="overall_similarity">
+                        <div class="color_box green">&nbsp;</div>
+                        <div class="similarity_title">相似度指标</div>
+                        <div class="similarity_percent">6%</div>
+                    </div>
+                    <div class="similarity_by_source">
+                        <div class="similarity_title">依來源标示相似度</div>
+                        <dl>
+                            <dt>Internet&nbsp;Sources:</dt>
+                            <dd>3%</dd>
+                            <div class="clear"></div>
+                            <dt>出版物:</dt>
+                            <dd>6%</dd>
+                            <div class="clear"></div>
+                            <dt>学生文稿:</dt>
+                            <dd>1%</dd>
+                            <div class="clear"></div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+                                 
+        </div>
+        <!-- ######### END Top Body  ##########################--> 
+        
+        
+    </div>
+</div>
+<!-- ########################### END Top of Report  ##########################--> 
+
+
+
+<!-- ########################### TOOLBAR  ##########################--> 
+<div id="index">
+	<div id="toolbar_wrapper">
+                <span id="exclude">
+                    <a href="javascript:changeQuoteExclusion(,)">排除引用</a>
+                    <a href="javascript:changeBibliographyExclusion()">不含参考书目</a>
+                    
+                        <a href="javascript:showSmallMatchExclusions()" id="exclude_small_matches_link">不含小型相符结果</a>
+                    
+                    <img src="/r/build/images/buttons/small/03954abd4e4d9c247be91770fe32d3f1cb_arrow_blue_down.gif"  class="drop_down_image" />
+
+                </span>
+                
+                <!-- Print,  Refresh, Download --> 
+                <a id="download_button" title="下载" href="javascript:saveReport();">下载</a>           
+                   
+                <a title="打印" id="print_button" href="javascript:printReport();">打印</a>
+                
+                <div  class="right">
+                <span>模式：</span> 
+                <select id="action" onChange="changeMode(this.value, 'zh_hans')">
+                    <option value="0">显示所有匹配度最高的
+                    <option value="1">每次显示一个匹配的
+                    <option value="2" selected>快速查看报告（经典页面）
+                </select>
+                </div>                
+                  
+                <div class="clear"></div>
+	</div>
+</div>
+<!-- ########################### END TOOLBAR  ##########################--> 
+
+
+<div class="links">
+	<div>
+	<p>1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1109/INFCOM.2012.6195537" target="_blank" style="color:red">Renchao Xie, , F. Richard Yu, and Hong Ji. "Energy-efficient spectrum sharing and power allocation in cognitive radio femtocell networks", 2012 Proceedings IEEE INFOCOM, 2012.</a></p>
+
+	</div>
+	<div>
+	<p>1% match (从 2017年03月31日 的网络)</p>
+
+	<p><a href="http://etds.lib.ncku.edu.tw/etdservice/view_metadata?etdun=U0026-0808201615010000" target="_blank" style="color:green">http://etds.lib.ncku.edu.tw/etdservice/view_metadata?etdun=U0026-0808201615010000</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1109/TCOMM.2015.2466238" target="_blank" style="color:blue">Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (从 2017年01月30日 的网络)</p>
+
+	<p><a href="http://ece.usu.edu/ou-files/pdfs/dissertation_005.pdf" target="_blank" style="color:brown">http://ece.usu.edu/ou-files/pdfs/dissertation_005.pdf</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1109/CHINACOM.2015.7497901" target="_blank" style="color:#ff6600">Senyao Zheng, , Hui Zhao, Long Zhao, Jun Wang, and Da Fu. "A novel beamforming scheme based on partial channel feedback in LS-MIMO systems", 2015 10th International Conference on Communications and Networking in China (ChinaCom), 2015.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1109/ISCID.2015.29" target="_blank" style="color:#630000">Zhang, Yajun, Tao Liang, and Aiwei Sun. "A New Max-Ratio Relay Selection Scheme in Secure Buffer-Aided Cooperative Wireless Networks", 2015 8th International Symposium on Computational Intelligence and Design (ISCID), 2015.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1109/WPMC.2014.7014882" target="_blank" style="color:#009cff">Liang, Tao, Tiankui Zhang, Jinlong Cao, and Chunyan Feng. "Joint resource allocation and power control scheme for device-to-device communication underlaying cellular networks", 2014 International Symposium on Wireless Personal Multimedia Communications (WPMC), 2014.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1109/GLOCOM.2014.7037583" target="_blank" style="color:#31ff00">Gu, Yunan, Yanru Zhang, Miao Pan, and Zhu Han. "Cheating in matching of device to device pairs in cellular networks", 2014 IEEE Global Communications Conference, 2014.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1007/978-3-319-30681-0" target="_blank" style="color:#330099">SpringerBriefs in Electrical and Computer Engineering, 2016.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1016/j.insmatheco.2004.07.003" target="_blank" style="color:#00cc99">Schrager, D.F.. "Pricing Rate of Return Guarantees in Regular Premium Unit Linked Insurance", Insurance Mathematics and Economics, 20041011</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (从 2017年02月19日 的网络)</p>
+
+	<p><a href="http://www.dtic.mil/dtic/tr/fulltext/u2/a246750.pdf" target="_blank" style="color:#ff0063">http://www.dtic.mil/dtic/tr/fulltext/u2/a246750.pdf</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=7396709" target="_blank" style="color:#006331">R. Chithra, Robert Bestak, Sarat Kumar Patra. "Hungarian Method Based Joint Transmission Mode and Relay Selection in Device-to-Device Communication", 2015 8th IFIP Wireless and Mobile Networking Conference (WMNC), 2015</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (从 2017年09月16日 的网络)</p>
+
+	<p><a href="http://www.ece.tamu.edu/~xizhang/papers/IEEE_J-SAC_D2D_Statistical_QoS_Provisioning_Paper_2015_Xi_Zhang.pdf" target="_blank" style="color:#9966ff">http://www.ece.tamu.edu/~xizhang/papers/IEEE_J-SAC_D2D_Statistical_QoS_Provisioning_Paper_2015_Xi_Zhang.pdf</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (从 2016年05月29日 的网络)</p>
+
+	<p><a href="http://publications.lib.chalmers.se/records/fulltext/236755/236755.pdf" target="_blank" style="color:#9c6331">http://publications.lib.chalmers.se/records/fulltext/236755/236755.pdf</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (从 2016年03月02日 的网络)</p>
+
+	<p><a href="http://eprints.networks.imdea.org/797/1/d2dsurvey.pdf" target="_blank" style="color:#ce0031">http://eprints.networks.imdea.org/797/1/d2dsurvey.pdf</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1109/GLOCOM.2012.6503812" target="_blank" style="color:#cc9900">Mohammadi, Mohommadali, Himal A. Suraweera, and Xiangyun Zhou. "Outage probability of wireless ad hoc networks with cooperative relaying", 2012 IEEE Global Communications Conference (GLOBECOM), 2012.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://ieeexplore.ieee.org/document/7878672/" target="_blank" style="color:#63009c">Ruofei Ma, Yao-Jen Chang, Hsiao-Hwa Chen, Chun-Yuan Chiu. "On Relay Selection Schemes for Relay-Assisted D2D Communications in LTE-A Systems", IEEE Transactions on Vehicular Technology, 2017</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1007/978-3-319-00536-2" target="_blank" style="color:#cc6600">Lecture Notes in Electrical Engineering, 2014.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://ieeexplore.ieee.org/document/7587807/" target="_blank" style="color:#cc0066">Hyun-Suk Lee, Jang-Won Lee. " QC LinQ: QoS and Channel-Aware Distributed Link Scheduler for D2D Communication ", IEEE Transactions on Wireless Communications, 2016</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1109/TCOMM.2013.071013.120787" target="_blank" style="color:#33cc99">Feng, Daquan, Lu Lu, Yi Yuan-Wu, Geoffrey Ye Li, Gang Feng, and Shaoqian Li. "Device-to-Device Communications Underlaying Cellular Networks", IEEE Transactions on Communications, 2013.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://dx.doi.org/10.1016/j.jnca.2016.11.002" target="_blank" style="color:#336699">Gandotra, Pimmy, Rakesh Kumar Jha, and Sanjeev Jain. "A survey on device-to-device (D2D) communication: Architecture and security issues", Journal of Network and Computer Applications, 2017.</a></p>
+
+	</div>
+	<div>
+	<p>< 1% match (出版物)</p>
+
+	<p><a href="http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=7547369" target="_blank" style="color:red">Renato Simoni, Vahid Jamali, Nikola Zlatanov, Robert Schober, Laura Pierucci, Romano Fantacci. "Buffer-Aided Diamond Relay Network with Block Fading and Inter-Relay Interference", IEEE Transactions on Wireless Communications, 2016</a></p>
+
+	</div>
+</div>
+<div id="body">
+<p>Joint Energy-Aware and Buffer-Assisted Relay Selection Method for Relay-Aided D2D Communications Lei Yu∗, Xiaoxiang Wang∗, Dongyu Wang∗? ∗ <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: Renchao Xie, , F. Richard Yu, and Hong Ji. "Energy-efficient spectrum sharing and power allocation in cognitive radio femtocell networks", 2012 Proceedings IEEE INFOCOM, 2012."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=40090049&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:red" class="red">Key Lab. of Universal Wireless Comm., Ministry of Education, Beijing</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> Univ. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: Renchao Xie, , F. Richard Yu, and Hong Ji. "Energy-efficient spectrum sharing and power allocation in cognitive radio femtocell networks", 2012 Proceedings IEEE INFOCOM, 2012."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=40090049&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:red" class="red">of Posts and Telecom., Beijing, P.R. China</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> Email(s): {zzmikkz, cpwang, dy wang <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 7 in source list: Liang, Tao, Tiankui Zhang, Jinlong Cao, and Chunyan Feng. "Joint resource allocation and power control scheme for device-to-device communication underlaying cellular networks", 2014 International Symposium on Wireless Personal Multimedia Communications (WPMC), 2014."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=54495300&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#009cff" class="#009cff">}@bupt.edu.cn Abstract—Device–device (D2D) communication is a</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> effective <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 7 in source list: Liang, Tao, Tiankui Zhang, Jinlong Cao, and Chunyan Feng. "Joint resource allocation and power control scheme for device-to-device communication underlaying cellular networks", 2014 International Symposium on Wireless Personal Multimedia Communications (WPMC), 2014."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=54495300&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#009cff" class="#009cff">technique</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> to improve performance on overall throughput and energy efficiency in cellular network. However, owing to the <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 2 in source list: http://etds.lib.ncku.edu.tw/etdservice/view_metadata?etdun=U0026-0808201615010000"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=255910441&n=2909&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:green" class="green">long separation</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> distances <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 2 in source list: http://etds.lib.ncku.edu.tw/etdservice/view_metadata?etdun=U0026-0808201615010000"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=255910441&n=2909&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:green" class="green">or poor link quality between the source and destination user</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> devices (UDs), the advantages of D2D communications is limited by only using direct D2D com- munication. For improving the system performance of cellular network, relay-aided D2D communications was put forward as a complement for direct D2D communications. The purpose of this article is to devise a relay selection method that improve the D2D communication performance. In this paper, we propose an Energy-Aware and Buffer-Assisted (EABA) relay selection method that take account of certain conditions jointly, including transmission rate, relay-available UD (RUD) residual energy, and RUD buffer state. At each time slot, according to the channel state, energy, and buffer size, a scheduling rule is calculated dynamically by the EABA relay selection method. And then, which of the links is activated to transmit packet is specified by the scheduling rule. Numerical examples are presented to show the performance of the EABA method. Keywords — D2D communication, Relay selection, Energy-Aware, Buffer-Aided <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 8 in source list: Gu, Yunan, Yanru Zhang, Miao Pan, and Zhu Han. "Cheating in matching of device to device pairs in cellular networks", 2014 IEEE Global Communications Conference, 2014."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=54408452&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#31ff00" class="#31ff00">I. INTRODUCTION To satisfy the increasing demand</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> of mobile communication, <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 8 in source list: Gu, Yunan, Yanru Zhang, Miao Pan, and Zhu Han. "Cheating in matching of device to device pairs in cellular networks", 2014 IEEE Global Communications Conference, 2014."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=54408452&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#31ff00" class="#31ff00">device-to-device (D2D)</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> communications is proposed as a effective technique for cellular network [1–3]. D2D commu- nication includes licensed-frequency and unlicensed-frequency D2D [4]. Unlicensed-frequency D2D communication is usu- ally exposed to the unknown dangers. Therefore, a lot of projects in this field study in licensed-frequency D2D, in <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 21 in source list: Gandotra, Pimmy, Rakesh Kumar Jha, and Sanjeev Jain. "A survey on device-to-device (D2D) communication: Architecture and security issues", Journal of Network and Computer Applications, 2017."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=59954356&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#336699" class="#336699">order to enhance the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> overall cellular <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 21 in source list: Gandotra, Pimmy, Rakesh Kumar Jha, and Sanjeev Jain. "A survey on device-to-device (D2D) communication: Architecture and security issues", Journal of Network and Computer Applications, 2017."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=59954356&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#336699" class="#336699">network performance,</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> such as spectrum and energy efficiency, by using mode selection and frequency reuse [5–7]. However, a majority of recent works have only studied in <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 17 in source list: Ruofei Ma, Yao-Jen Chang, Hsiao-Hwa Chen, Chun-Yuan Chiu. "On Relay Selection Schemes for Relay-Assisted D2D Communications in LTE-A Systems", IEEE Transactions on Vehicular Technology, 2017"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=555347073&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#63009c" class="#63009c">direct D2D communications. The advantages of D2D</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> com- munications is limited by only using direct D2D communi- cation, because the failure of direct D2D communications is probably caused by the <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 2 in source list: http://etds.lib.ncku.edu.tw/etdservice/view_metadata?etdun=U0026-0808201615010000"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=255910441&n=2909&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:green" class="green">long separation</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> distances <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 2 in source list: http://etds.lib.ncku.edu.tw/etdservice/view_metadata?etdun=U0026-0808201615010000"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=255910441&n=2909&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:green" class="green">or poor link quality between the source and destination</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> D2D-capable <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 2 in source list: http://etds.lib.ncku.edu.tw/etdservice/view_metadata?etdun=U0026-0808201615010000"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=255910441&n=2909&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:green" class="green">user</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> devices (DUDs) [8]. To solve the question, relay-aided D2D communications was supposed to explore the profits of D2D communications [9, 10]. The range of D2D communications is obviously extended by using relay [11]. Compared to fixed relay [12], the relay-capable UD (RUD) aided D2D communication is more helpful owing to the explosive growth of UE. Thus, a lot of the works use RUD instead of fixed relay in relay-aided D2D Communications. With the help of a RUD, two DUDs be able to communicate with each other even if they are separated by great distance or the link between them is poor[9, 10]. To apply relay-aided D2D communications in cellular net- work, the most important work is selecting optimal RUD under BS’s control. The issues of relay selection have been widely discussed in cellular network cooperative communications. Most relay selection methods are executed on two successive time slots, which at the previous slot, the packet are sent from source to RUD and at the next slot, the destination receive the packet transmitted by the relay. This relaying method is known as conventional relaying [13]. Moreover, most of the existing relay selection methods focused on physical layer (PHY), the residual energy and buffer state of candidate relay node was basically ignored. What’s more, the channel reuse is not included in most of these methods. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=53079529&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">In this</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> paper, <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=53079529&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">we</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> focused <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=53079529&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">on relay-aided D2D</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> communica- tion. Besides, both direct and <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=53079529&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">relay-aided D2D communication</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> are reusing <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=53079529&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> wireless frequency <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=53079529&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">of</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> cellular user devices (CUDs). According to the channel state of each link, RUD residual energy and RUD buffer state, a joint Energy-Aware and Buffer-assisted (EABA) relay selection method is pre- sented in this paper. Then, the method selects the link with the highest priority to transmit data instead of conventional relaying [14]. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 6 in source list: Zhang, Yajun, Tao Liang, and Aiwei Sun. "A New Max-Ratio Relay Selection Scheme in Secure Buffer-Aided Cooperative Wireless Networks", 2015 8th International Symposium on Computational Intelligence and Design (ISCID), 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=58498760&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#630000" class="#630000">The rest of this paper is organized as follows. We</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> introduce a <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 6 in source list: Zhang, Yajun, Tao Liang, and Aiwei Sun. "A New Max-Ratio Relay Selection Scheme in Secure Buffer-Aided Cooperative Wireless Networks", 2015 8th International Symposium on Computational Intelligence and Design (ISCID), 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=58498760&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#630000" class="#630000">system model</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=53079529&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">for relay-aided D2D</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> communications <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=53079529&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">in</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> cellu- lar <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 3 in source list: Hasan, Monowar, and Ekram Hossain. "Distributed Resource Allocation for Relay-Aided Device-to-Device Communication Under Channel Uncertainties: A Stable Matching Approach", IEEE Transactions on Communications, 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=53079529&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:blue" class="blue">network</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> and formulates optimization problems in Section II. A joint Energy-Aware and Buffer-Assisted (EABA) relay selection method is proposed <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: R. Chithra, Robert Bestak, Sarat Kumar Patra. "Hungarian Method Based Joint Transmission Mode and Relay Selection in Device-to-Device Communication", 2015 8th IFIP Wireless and Mobile Networking Conference (WMNC), 2015"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=527160685&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">in Section III.</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> The numerical <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: R. Chithra, Robert Bestak, Sarat Kumar Patra. "Hungarian Method Based Joint Transmission Mode and Relay Selection in Device-to-Device Communication", 2015 8th IFIP Wireless and Mobile Networking Conference (WMNC), 2015"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=527160685&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">results and</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> analysis <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: R. Chithra, Robert Bestak, Sarat Kumar Patra. "Hungarian Method Based Joint Transmission Mode and Relay Selection in Device-to-Device Communication", 2015 8th IFIP Wireless and Mobile Networking Conference (WMNC), 2015"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=527160685&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">are</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> demonstrated <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: R. Chithra, Robert Bestak, Sarat Kumar Patra. "Hungarian Method Based Joint Transmission Mode and Relay Selection in Device-to-Device Communication", 2015 8th IFIP Wireless and Mobile Networking Conference (WMNC), 2015"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=527160685&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">in Section</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> IV. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: R. Chithra, Robert Bestak, Sarat Kumar Patra. "Hungarian Method Based Joint Transmission Mode and Relay Selection in Device-to-Device Communication", 2015 8th IFIP Wireless and Mobile Networking Conference (WMNC), 2015"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=527160685&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">Finally,</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> we give <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 12 in source list: R. Chithra, Robert Bestak, Sarat Kumar Patra. "Hungarian Method Based Joint Transmission Mode and Relay Selection in Device-to-Device Communication", 2015 8th IFIP Wireless and Mobile Networking Conference (WMNC), 2015"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=527160685&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#006331" class="#006331">the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> conclusions in Section V. CUD C1 CUD CM BS CUD Ck tate to minimize transmission time and maximize total amount of transmission data, before the communication between the source and the destination becomes unavailable. Let T (χ) rep- resent the file transmission time of method χ, in other words, the transmission time since the first packet is transmitted by the S until the last packet is received by the D, the <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 20 in source list: Feng, Daquan, Lu Lu, Yi Yuan-Wu, Geoffrey Ye Li, Gang Feng, and Shaoqian Li. "Device-to-Device Communications Underlaying Cellular Networks", IEEE Transactions on Communications, 2013."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=55149404&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#33cc99" class="#33cc99">problem can be expressed as</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> parameters. βs <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 20 in source list: Feng, Daquan, Lu Lu, Yi Yuan-Wu, Geoffrey Ye Li, Gang Feng, and Shaoqian Li. "Device-to-Device Communications Underlaying Cellular Networks", IEEE Transactions on Communications, 2013."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=55149404&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#33cc99" class="#33cc99">,d</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> denote slow fading gains with log-normally distribution. ζs,d denote fast fading gains with exponential <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: http://ece.usu.edu/ou-files/pdfs/dissertation_005.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=4062775928&n=2474&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">distribution. α is the path loss exponent and</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> Ls <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: http://ece.usu.edu/ou-files/pdfs/dissertation_005.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=4062775928&n=2474&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">,d is the distance between</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> s <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: http://ece.usu.edu/ou-files/pdfs/dissertation_005.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=4062775928&n=2474&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">and</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> d <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 4 in source list: http://ece.usu.edu/ou-files/pdfs/dissertation_005.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=4062775928&n=2474&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:brown" class="brown">The</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> purpose of this paper is to efficiently utilize cellular frequency resources, RUD residual energy and RUD buffer s- RUE R2 min T (χ) χ subject to Tj ≤ τj (1), ∀j, DUD S RUD Rj DUD D j∑∈ [1, 2, . . . , N ] , (2) (2a) (2b) RUD R1 RUD RN where Tj denote RUD Rj total working time, N denote the total number of packets, and τj (1) denote the residual work CUD: Cellular UD Cellular uplink time of∑relay Rj in time slot 1. RUD: Relay capable UD D2D link DUD: D2D UD Interference link III. EABA RELAY SELECTION ETHOD M As discussed above, an optimal link should be selected by Fig. 1. The D2D communications scenario used in this paper, where D2D communication reuses the uplink frequency of CUD Ck. DUDs S denote the the BS according to transmission rate, RUD residual energy source D2D UDs and DUDs D denote the destination D2D UDs. RUD Rj and RUD buffer state. Therefore, we show the methods to is the selected relay UD. establish of the transmission rate of the link between DUD and RUD, the residual energy and buffer state of RUD. We II. SYSTEM MODEL AND PROBLEM FORMULATION will also propose the EABA method for solving the problem in Section II. As presented in Fig. 1, a scenario which composed of CUD- s, RUDs, DUDs is studied. All of these UDs are controlled by A. Link Transmission Rate Estimation BS. We assume that there is only one source and destination As shown in Fig. 1, the link transmission rate is derived in DUD in the cellular. We also assume that there are M CUDs this subsection. Let PCi,PS, and PRj denote the transmission which communicate with the BS through cell uplink channels power of the CUD Ci, the S, and the RUD Rj, respectively. and N idle user devices which can be used as RUDs. In RUD Rj is working in half-duplex mode. If link S → Rj the following sections, we let C1, C2, . . . , Ci, . . . , CM denote is selected as the transmission link and the uplink channel of M CUDs, and R1, R2, . . . , Rj , . . . , RN denote N RUDs, i.e., Ci (i ∈ [1,2,...,M]) is selected as the reuse channel, the <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 11 in source list: http://www.dtic.mil/dtic/tr/fulltext/u2/a246750.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=42548079&n=2909&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ff0063" class="#ff0063">i ∈ [1, 2, . . . , M</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> ] and <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 11 in source list: http://www.dtic.mil/dtic/tr/fulltext/u2/a246750.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=42548079&n=2909&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ff0063" class="#ff0063">j ∈ [1, 2, . . . , N ]. The</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> source DUD <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 11 in source list: http://www.dtic.mil/dtic/tr/fulltext/u2/a246750.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=42548079&n=2909&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ff0063" class="#ff0063">is</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> received signal at Rj can be expressed as denoted by S and the destination DUD is denoted by D. Moreover, presume that M CUDs use M separated cell ySi,Rj = hS,Rj · xS + hCi,Rj · xCi + n0 (3) uplink channels which have same bandwidth and can be reused by D2D communication. Depending on these assumptions, we where xS is the signal transmitted from the S, hCi,Rj · xCi only consider the interference from the reused CUDs to the denote the interference from CUD Ci to Rj, n0 is additive RUD and the D and the interference from the S and RUD to white Gaussian noise (AWGN), i.e., n0 ∼ (0,σ2). If link the BS. Rj → D is selected as the transmission link and the uplink In addition, assumed that the BS can acquire the channel channel of Ck (k ∈ [1,2,...,M]) is reused, the received <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 15 in source list: http://eprints.networks.imdea.org/797/1/d2dsurvey.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=4111325578&n=2209&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ce0031" class="#ce0031">state information(CSI) of all links and</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> that <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 15 in source list: http://eprints.networks.imdea.org/797/1/d2dsurvey.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=4111325578&n=2209&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ce0031" class="#ce0031">the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> D2D mode, signal at destination DUD D can be expressed as RUD and reuse uplink selection is decided by the BS. Besides, yRkj,D = hRj,D · xRj + hCk,D · xCk + n0 (4) we assume that both CUDs uplink channels and D2D links should meet the minimum SINR requirement. where xS is the signal transmitted from Rj, hCk,D·xCk denote The channel model can be expressed as [15]: the interference from CUD Ck to D. |hs,d|2 = K0βs,dζs,d · L−s,αd The SINR of Rj and the D are (1) |hs,d|2 is the channel gain between two UDs or between a γSi,Rj PCiP|hSC|hi,SR,jR|2j|+2 σ2 , γRkj,D = = PRj|hRj,D|2 UD and the BS. K0 is a constant determined by cellular PCk|hCk,D|2 + σ2 (5) <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 9 in source list: SpringerBriefs in Electrical and Computer Engineering, 2016."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=58321918&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#330099" class="#330099">respectively. The achievable data rate of</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> link S → Rj <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 9 in source list: SpringerBriefs in Electrical and Computer Engineering, 2016."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=58321918&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#330099" class="#330099">and</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> Rj → D <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 9 in source list: SpringerBriefs in Electrical and Computer Engineering, 2016."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=58321918&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#330099" class="#330099">can be expressed as</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> RS,Rj = B log2(1 + γSi,Rj ), RRj ,D = B log2(1 + γRkj ,D ) (6) respectively, where B denote the channel bandwidth. Likewise, the SINR of BS is γCji,B PSP|ChiS|,hBC|i2,B+|2σ2 = , γCjk,B = PCk |hCk ,D |2 PRj|hRj,B|2 + σ2 (7) respectively, where B in this equation denote BS. B. RUD Residual Energy And Buffer State Estimation Owing to the finite energy of the relay, the relay only forward a finite amount of data before the energy is exhausted. Thus, even though a relay has sufficient buffer size, it’s no use sending more data to the relay than it can forward later. To take this into account, we should know the data size can be transmitted by RUD Ri under the residual energy. Let E1, E2, . . . , Ej, . . . , EN denote the total energy of N RUDs, respectively. To describe the influence of the discharge current and transmission power of each RUD on RUD remain- ing work time, Peukert’s Law [16] is expressed as τj = Ej /Ijα (8) where τj is the remaining work time of Rj , Ij is discharge current, and α is the Peukert constant and its usually equal to 1.3 [16]. Using PRj denotes the transmission power of Rj , the discharge current can be expressed as Ij = PRj /V0 (9) where V0 denote the discharge voltage of each UD and predefine the same V0 for each UD. Therefore, we can establish the remaining work time of each RUD which we know residual energy, transmission power, and discharge voltage. In this paper, the transmission power of all UDs are predefined as a fixed value, so we can use the remaining operation time τj denotes the residual energy of RUD Rj . Then the minimum data size transmitted by RUD Rj can be expressed as θj = Rmin · τj (10) where Rmin is the minimum transmission speed of RUD Rj Moreover, the energy of the selected relay is decreased, i.e., τj(t + 1) = τj(t) − tranj(t), where tranj(t) denotes the transmission time of RUD Rj to the destination. Qj(t) is the amount of data stored in RUD Rj, so ej(t) = Lj − Qj(t), where Lj denotes the total buffer size of RUD Rj, so ej(t) is the buffer size of RUD Rj can be used <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 22 in source list: Renato Simoni, Vahid Jamali, Nikola Zlatanov, Robert Schober, Laura Pierucci, Romano Fantacci. "Buffer-Aided Diamond Relay Network with Block Fading and Inter-Relay Interference", IEEE Transactions on Wireless Communications, 2016"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=503827825&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:red" class="red">at the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> starting <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 22 in source list: Renato Simoni, Vahid Jamali, Nikola Zlatanov, Robert Schober, Laura Pierucci, Romano Fantacci. "Buffer-Aided Diamond Relay Network with Block Fading and Inter-Relay Interference", IEEE Transactions on Wireless Communications, 2016"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=503827825&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:red" class="red">of time slot t.</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> And then, the tranj <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 14 in source list: http://publications.lib.chalmers.se/records/fulltext/236755/236755.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=1782240399&n=2474&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#9c6331" class="#9c6331">(t) can be expressed as</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> tranj <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 14 in source list: http://publications.lib.chalmers.se/records/fulltext/236755/236755.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=1782240399&n=2474&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#9c6331" class="#9c6331">(t) = T</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> {Qj <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 14 in source list: http://publications.lib.chalmers.se/records/fulltext/236755/236755.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=1782240399&n=2474&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#9c6331" class="#9c6331">(t)/</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> RRj <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 10 in source list: Schrager, D.F.. "Pricing Rate of Return Guarantees in Regular Premium Unit Linked Insurance", Insurance Mathematics and Economics, 20041011"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=7351276&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#00cc99" class="#00cc99">,D(t)</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> RRj <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 10 in source list: Schrager, D.F.. "Pricing Rate of Return Guarantees in Regular Premium Unit Linked Insurance", Insurance Mathematics and Economics, 20041011"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=7351276&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#00cc99" class="#00cc99">,D(t)·T</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match">&gt;Qj <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 10 in source list: Schrager, D.F.. "Pricing Rate of Return Guarantees in Regular Premium Unit Linked Insurance", Insurance Mathematics and Economics, 20041011"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=7351276&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#00cc99" class="#00cc99">(t)</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> RRj,D <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 10 in source list: Schrager, D.F.. "Pricing Rate of Return Guarantees in Regular Premium Unit Linked Insurance", Insurance Mathematics and Economics, 20041011"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=7351276&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#00cc99" class="#00cc99">(t)·</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> T <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 10 in source list: Schrager, D.F.. "Pricing Rate of Return Guarantees in Regular Premium Unit Linked Insurance", Insurance Mathematics and Economics, 20041011"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=7351276&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#00cc99" class="#00cc99">≤Qj(t)</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> (11) where <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 10 in source list: Schrager, D.F.. "Pricing Rate of Return Guarantees in Regular Premium Unit Linked Insurance", Insurance Mathematics and Economics, 20041011"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=7351276&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#00cc99" class="#00cc99">T is</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> duration of a time slot, and RRj,D <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 19 in source list: Hyun-Suk Lee, Jang-Won Lee. " QC LinQ: QoS and Channel-Aware Distributed Link Scheduler for D2D Communication ", IEEE Transactions on Wireless Communications, 2016"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=519371383&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc0066" class="#cc0066">(t) is the data rate of link</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> Rj → D at time slot t. 500 400 300 Evolved Node B (eNB) 200 Cell coverage 100 Distance between DUDs 0 Source DUD Destination DUD -100 Cellular UE (CUD) -200 Relay capable UE (RUD) -300 -400 -500 -500 -400 -300 -200 -100 0 100 200 300 400 500 Fig. 2. The simulation of the scenario. The distance between the S and D is 220m. C. EABA Strategy For the purpose of transmitting the file as quickly as possibly, Energy-Aware and Buffer-Assisted (EABA) executes depending on the following theory: the relay which has a lot of residual energy and buffer space should have a higher priority to recept data. On the other hand, if the relay has a large number of data in its buffer, it should get a higher priority to transmit data to the destination. What’s more, a link with a high SINR, which means that more data will be transmitted at a time slot, should have a higher chance to transmit data. In the EABA method, the BS calculates the weight of every link S → Rj as WS→Rj =min(θj−Qj,ej)·RS→Rj·K[γS→Rj ≥γd)] (12) while K[x] is zero when x is false and one when x is true. Hence, a link S → Rj get a valid weight only when RUD Rj has enough buffer space and residual energy, and the link SINR must no less than the predefined SINR requirement for D2D link. Similarly, for link Rj → D, the BS calculates the weight as WRj→D = Qj · RRj→D · K[γRj→D ≥ γd)] (13) According to (13), a link Rj → D get a valid weight only when relay Rj has data stored in its buffer. After adopting EABA method calculating the weight, the link lmax which has the highest weight is selected, where lmax = arg l∈{S→Rj }∪{Rj →D} max {Wl} (14) Algorithm 1 shows the execution process of the EABA method. The EABA method considers transmission rate of each link, residual energy and buffer state of each relay, so the BS needs to know all of there information. When the link with the highest weight is activated by BS, the BS will notify the whole D2D network either the S should transmit to the selected relay or the selected relay transmit to the D. Algorithm 1 EABA Relay Selection Method 1: Each RUD calculates the minimum data size that can be transmitted by itself using (10) and sends residual energy and buffer state to the BS. 2: The BS computes the weight for link S → Rj using (12). 3: The BS computes the weight for link S → Rj using (13). 4: Under BS controls, the best link is selected based on (14). As long as the network is available, the procedure of EABA continues. Depending on the above discussion of the EABA method, if relay Rj has data stored in its buffer, Rj will have enough energy to transmit that data. Note that there will be a time slot in which that link Rj → D will have a good channel condition, Rj will transmit the data which has been stored in Rj to the D successfully. Hence, if the network becomes unavailable, there will be no data stored in relay Rj . <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: Renchao Xie, , F. Richard Yu, and Hong Ji. "Energy-efficient spectrum sharing and power allocation in cognitive radio femtocell networks", 2012 Proceedings IEEE INFOCOM, 2012."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=40090049&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:red" class="red">IV. SIMULATION RESULTS In this section, we</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> provide <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: Renchao Xie, , F. Richard Yu, and Hong Ji. "Energy-efficient spectrum sharing and power allocation in cognitive radio femtocell networks", 2012 Proceedings IEEE INFOCOM, 2012."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=40090049&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:red" class="red">simulations</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> in MATLAB <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 1 in source list: Renchao Xie, , F. Richard Yu, and Hong Ji. "Energy-efficient spectrum sharing and power allocation in cognitive radio femtocell networks", 2012 Proceedings IEEE INFOCOM, 2012."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=40090049&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:red" class="red">to evaluate the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> proposed relay selection method. Simulation is performed in a single cellular, and we assume that the cellular radius is 500 meters. We also assume that all CUDs are random distributed in the cellular. Besides, there are only two DUDs (the S and the D), and all RUDs are random distributed in a circular area with the distance between the S and the D as its radius and the S as its center. The simulation of the scenario is shown in Fig. 2, and Table I lists main parameters used in this paper. Since all UDs are re-deployed random in different test, we did 100,000 times experiments at the same scenario for getting an average result. The EABA relay selection method is validated by the simulations as shown in Fig. 3, 4, 5. To evaluate the necessity of it, we make a comparison of ”EABA relay selection” with ”random <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 16 in source list: Mohammadi, Mohommadali, Himal A. Suraweera, and Xiangyun Zhou. "Outage probability of wireless ad hoc networks with cooperative relaying", 2012 IEEE Global Communications Conference (GLOBECOM), 2012."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=54510177&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc9900" class="#cc9900">relay selection” and</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> ”rate based <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 16 in source list: Mohammadi, Mohommadali, Himal A. Suraweera, and Xiangyun Zhou. "Outage probability of wireless ad hoc networks with cooperative relaying", 2012 IEEE Global Communications Conference (GLOBECOM), 2012."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=54510177&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc9900" class="#cc9900">relay selection”.</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> All <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 16 in source list: Mohammadi, Mohommadali, Himal A. Suraweera, and Xiangyun Zhou. "Outage probability of wireless ad hoc networks with cooperative relaying", 2012 IEEE Global Communications Conference (GLOBECOM), 2012."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=54510177&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc9900" class="#cc9900">the</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> three <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 16 in source list: Mohammadi, Mohommadali, Himal A. Suraweera, and Xiangyun Zhou. "Outage probability of wireless ad hoc networks with cooperative relaying", 2012 IEEE Global Communications Conference (GLOBECOM), 2012."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=54510177&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc9900" class="#cc9900">relay selection</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> methods assume that direct D2D mode is unavailable, that is to say, the three methods are only working in relay-aided D2D mode. Moreover, we also ignore the time and energy consumption caused by calculation. The ”random relay selection” selects a link randomly; The ”rate based relay selection” selects a link with maximum SINR, i.e., the maximum transmission rate; while the ”EABA relay selection” selects the link which is calculated by the formula proposed in Section III. Fig. 3 demonstrates the probability of successful communi- cations using the three relay selection methods. As the distance between DUDs S and D decreases, the chances of successful communication are greatly improved. The result is very plausi- ble, as the average distance between random distributed RUDs and DUDs will decrease with the decreasing distance between the S and D. So the channel gain of link between DUDs and RUDs will increase with an decreasing distance, which will improve the chance of successful communication. Specifically, the EABA method presents the best performance. The reason is that random relay selection method randomly selects a link, SINR of which may not meet the requirements and TABLE I SIMULATION PARAMETERS Parameters Value Cellular radius 500 m Noise density -174 dBm/Hz The number of CUD UE transmit power 20 24 dBm The number of DUD 10 Path-loss constant (K0) Path-loss exponent (α) 0.01 4 SINR requirements (γc, γd) 20 dB Slow fading (βs,d) Log-normal distribution with mean value of zero and stan- dard deviation of 10 Fast fading (ζs,d) Exponential distribution with mean value of one Packet number 50 Packet size A unit time slot (△T ) RUD total energy (Ei) 1024 bits 1µs Randomly distributed in [0,1440] mAh 1 0.9 Success probability of communications 0.8 0.7 0.6 0.5 Random relay selection(SINR requirements is 70dB) 0.4 Rate based relay selection(SINR requirements is 70dB) EABA relay selection(SINR requirements is 70dB) 0.3 Random relay selection(SINR requirements is 20dB) Rate based relay selection(SINR requirements is 20dB) 0.2 EABA relay selection(SINR requirements is 20dB) 0.1 020 60 100 140 180 220 Distance between the S and D (m) Fig. 3. The probability of successful communications using the three relay selection methods. The RUD buffer size is 5, the uplink channel bandwidth is 720 kHz. subsequently lead to communication failure. Rate based relay selection method selects a link has maximum link transmission rate, but the RUDs buffer states and residual energies are not considered. Even though the method selects a link from S to RUD with maximum link transmission rate, but the RUD does not have enough buffer space or residual energy which may lead to communication failure. Furthermore, no matter which method is applied, D2D communication achieves higher success probability under a lower link SINR requirement. Fig. 4 shows that the total data transmission time decreas- es when the distance between S and D is expanded. The transmission rate of both S-to-RUD and RUD-to-D links will be reduced by expanding separation distance, directly resulting in a decreased amount of transmission data in all of links. Thus, the total transmission time will go up. In the three methods, the EABA method has the minimum total transmission time, because it has a higher data rate and communications success probability. The random relay selection method shows the worst performance, due to its lowest link data rate and communications success probability. 7 #10 11 Total transfer time of Random relay selection Total transfer time of Rate based relay selection Total transfer time of EABA relay selection 6 Total tranfer data of Random relay selection Total tranfer data of Rate based relay selection Total tranfer data of EABA relay selection Total data that can be transmitted within RUD residual energy (bits) 5 4 3 2 1 0 20 60 100 140 180 Distance between the S and D (m) #104 5 4 3 2 Total data transfer time (us) 1 220 0 Fig. 4. The total transmission time and the total amount of data transmitted with three relay selection methods. The RUD buffer size is 5, the uplink channel bandwidth is 720 kHz. 105 Total transmission time (us) 104 Random selection; bandwidth = 720kHz Rate based selection; bandwidth = 720kHz EABA selection; bandwidth = 720kHz Random selection; bandwidth = 540kHz Rate based selection; bandwidth = 540kHz EABA selection; bandwidth = 540kHz 103 1 2 3 4 5 6 7 8 Buffer size of RUDs (number of packets) Fig. 5. The total transmission time with varying buffer size, and channel bandwidths. The distance between the S and D is 180m. Although rate based relay selection method select the fastest link, but the lower communication success probability leading to a lower transmission time than EABA method . Fig. 4 shows that the influences of the distances between the S and D on the total amount of data transmitted by the three relay selection methods. As the distances increasing, the path loss will significantly enhance, leading to a decreasing link transmission rate. Moreover, under the same cellular param- eters, the random method affords a much worse performance than the other two selection methods, because both the selected link data rate and residual energy of RUD are neglected. Despite rate based method chooses the link which has highest transmission rate to transmit data, it will consume all of the energy of the system quickly, because it is not consider the residual energy of RUD. The EABA method provides the best performance, because it not only ensure the system work more time, but also ensure the link data rate. Fig. 5 illustrates the effects of the size of RUD’s buffer on the total transmission time with various bandwidths. With the same bandwidth, if buffer size is less than 5, increasing the buffer size of RUDs leads to a decrease in the total data trans- mission time. As the buffer size increases, the probability of successful communications increases, and this leads to lower total data transmission time. Otherwise, the total time isn’t influenced by buffer size when it is greater than 5. The reason is that the communication failure caused by lacking of buffer size does not happen when RUDs has enough buffer size. No matter which method is used, enhancing channel bandwidth will significantly decrease the total data transmission time, causing a bigger bandwidth leads to a higher transmission rata for each link. What’s more, the total data transmission time of EABA method is shorter than that of other methods with same buffer size and bandwidth, and the strength of EABA method is more dramatically at lower bandwidth. V. CONCLUSION In this paper, we designed an Energy-Aware and Buffer- Assisted (EABA) relay selection method that jointly con- sidered transmission rate, RUD residual energy, and RUD buffer state. We also described the compute processes of the transmission rate, RUD residual energy, and RUD buffer state. Specially, we established a relay selection method which select the best link instead of selecting best relay. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 18 in source list: Lecture Notes in Electrical Engineering, 2014."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=52986901&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc6600" class="#cc6600">Simulation results</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> showed <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 18 in source list: Lecture Notes in Electrical Engineering, 2014."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=52986901&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc6600" class="#cc6600">that the proposed method</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> provides the <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 18 in source list: Lecture Notes in Electrical Engineering, 2014."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=52986901&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#cc6600" class="#cc6600">better</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> overall transmission performance compared with other relay selection methods. <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 5 in source list: Senyao Zheng, , Hui Zhao, Long Zhao, Jun Wang, and Da Fu. "A novel beamforming scheme based on partial channel feedback in LS-MIMO systems", 2015 10th International Conference on Communications and Networking in China (ChinaCom), 2015."><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=59025512&n=37&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#ff6600" class="#ff6600">ACKNOWLEDGMENT This work was supported by the National Key Technolo- gy R&amp;D Program</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> (No.2015BAI01B14) <img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" height="1" width="1" alt="Begin Match to source 13 in source list: http://www.ece.tamu.edu/~xizhang/papers/IEEE_J-SAC_D2D_Statistical_QoS_Provisioning_Paper_2015_Xi_Zhang.pdf"><a href="javascript:void(0);" onClick="window.open('newreport_context.asp?r=75.367957329048&svr=324&lang=zh_hans&sid=2038898078&n=2909&svr=330&session-id=fa1ed940bff61ffeb66ee67330838d18', 'context', 'location=no,menubar=no,resizable=yes,scrollbars=yes,titlebar=no,toolbar=no,status=no')" style="color:#9966ff" class="#9966ff">and the Fundamental Research Funds for the Central Universities.</a><img src="/r/build/images/new_dynamic/df3e567d6f16d040326c7a0ea29a4f41cb_spacer.gif" alt="End Match"> REFERENCES [1] K. Doppler, M. Rinne, C. Wijting, C. B. Ribeiro, and K. Hugl, “Device-to-device communication as an under- lay to LTE-advanced networks,” IEEE Communications Magazine, vol. 47, no. 12, pp. 42–49, Dec 2009. [2] L. Ferdouse, W. Ejaz, K. Raahemifar, A. Anpalagan, and M. Markandaier, “Interference and throughput aware resource allocation for multi-class D2D in 5G networks,” IET Communications, vol. 11, no. 8, pp. 1241–1250, 2017. [3] J. Gu, S. J. Bae, S. F. Hasan, and M. Y. Chung, “Heuristic Algorithm for Proportional Fair Scheduling in D2D-Cellular Systems,” IEEE Transactions on Wireless Communications, vol. 15, no. 1, pp. 769–780, Jan 2016. [4] P. Mach, Z. Becvar, and T. Vanek, “In-band device-to- device communication in ofdma cellular networks: A survey and challenges,” IEEE Communications Surveys Tutorials, vol. 17, no. 4, pp. 1885–1922, Fourthquarter 2015. [5] R. Ma, Y. J. Chang, H. H. Chen, and C. Y. Chiu, “On Relay Selection Schemes for Relay-Assisted D2D Communications in LTE-A Systems,” IEEE Transactions on Vehicular Technology, vol. PP, no. 99, pp. 1–1, 2017. [6] M. Oiwa and S. Sugiura, “On the Simultaneous Exploita- tion of Multiple Source-to-Relay Channels in Buffer- Aided Two-Hop Cooperative Networks,” in 2016 IEEE 83rd Vehicular Technology Conference (VTC Spring), May 2016, pp. 1–5. [7] Z. Chen, N. Pappas, and M. Kountouris, “Probabilistic Caching in Wireless D2D Networks: Cache Hit Optimal Versus Throughput Optimal,” IEEE Communications Let- ters, vol. 21, no. 3, pp. 584–587, March 2017. [8] J. Y. Pan and M. H. Hsu, “Relay selection of relay- assisted Device-to-Device and uplink communication un- derlying cellular networks,” in 2017 International Con- ference on Computing, Networking and Communications (ICNC), Jan 2017, pp. 980–985. [9] N. Wei, X. Lin, and Z. Zhang, “Optimal Relay Probing in Millimeter-Wave Cellular Systems With Device-to- Device Relaying,” IEEE Transactions on Vehicular Tech- nology, vol. 65, no. 12, pp. 10 218–10 222, Dec 2016. [10] A. Alabbasi and B. Shihada, “Optimal Cross-Layer De- sign for Energy Efficient D2D Sharing Systems,” IEEE Transactions on Wireless Communications, vol. 16, no. 2, pp. 839–855, Feb 2017. [11] R. Zeng and C. Tepedelenlioglu, “Multiple Device-to- Device Users Overlaying Cellular Networks,” in 2017 IEEE Wireless Communications and Networking Confer- ence (WCNC), March 2017, pp. 1–6. [12] M. Hasan, E. Hossain, and D. I. Kim, “Resource Al- location Under Channel Uncertainties for Relay-Aided Device-to-Device Communication Underlaying LTE-A Cellular Networks,” IEEE Transactions on Wireless Com- munications, vol. 13, no. 4, pp. 2322–2338, April 2014. [13] N. Zlatanov, A. Ikhlef, T. Islam, and R. Schober, “Buffer- aided cooperative communications: opportunities and challenges,” IEEE Communications Magazine, vol. 52, no. 4, pp. 146–153, April 2014. [14] J. Hajipour, C. Leung, and J. M. Niya, “Context-Aware Relay Selection in Buffer-Aided Wireless Relay Net- works,” IEEE Communications Letters, vol. 20, no. 12, pp. 2502–2505, Dec 2016. [15] D. Feng, L. Lu, Y. Yuan-Wu, G. Y. Li, G. Feng, and S. Li, “Device-to-Device Communications Underlaying Cellu- lar Networks,” IEEE Transactions on Communications, vol. 61, no. 8, pp. 3541–3551, August 2013. [16] F. Wang, C. Xu, L. Song, and Z. Han, “Energy- Efficient Resource Allocation for Device-to-Device Un- derlay Communication,” IEEE Transactions on Wireless Communications, vol. 14, no. 4, pp. 2082–2092, April 2015. </p>
+</div>
+</body>
+</html>
